@@ -18,10 +18,10 @@ const W = 190, H = 54
 // Node colors by kind. Inline styles, because React Flow's CSS layer outranks Tailwind's.
 type Kind = 'ugrad' | 'grad' | 'prereq' | 'external'
 const KIND: Record<Kind, { label: string; background: string; borderColor: string; color: string; borderStyle?: string }> = {
-  ugrad: { label: 'undergrad', background: '#fbeef2', borderColor: '#d98aa3', color: '#1c1917' },
-  grad: { label: 'graduate', background: '#e9f0fd', borderColor: '#7da2e8', color: '#1c1917' },
-  prereq: { label: 'prerequisite from outside program', background: '#f5f5f4', borderColor: '#a8a29e', color: '#1c1917' },
-  external: { label: 'non-CISC', background: '#fff', borderColor: '#a8a29e', color: '#78716c', borderStyle: 'dashed' },
+  ugrad: { label: 'Undergraduate', background: '#fbeef2', borderColor: '#d98aa3', color: '#1c1917' },
+  grad: { label: 'Graduate', background: '#e9f0fd', borderColor: '#7da2e8', color: '#1c1917' },
+  prereq: { label: 'Prerequisite from outside the program', background: '#f5f5f4', borderColor: '#a8a29e', color: '#1c1917' },
+  external: { label: 'Outside CISC', background: '#fff', borderColor: '#a8a29e', color: '#78716c', borderStyle: 'dashed' },
 }
 
 // Lay the prerequisite DAG out left-to-right with dagre.
@@ -63,7 +63,7 @@ function GraphPage() {
 
   return (
     <>
-      <h1 className="page-title">All prerequisites</h1>
+      <h1 className="page-title">Prerequisite graph</h1>
       <div className="mb-3 flex flex-wrap items-center gap-3">
         <select className="field" value={program} onChange={e => navigate({ to: '/graph', search: { program: e.target.value } })}>
           <option value="all">Entire CISC catalog</option>
@@ -77,12 +77,15 @@ function GraphPage() {
               {KIND[k].label}
             </span>
           ))}
+          <span className="flex items-center gap-1.5">
+            <svg width="20" height="8" aria-hidden="true"><line x1="0" y1="4" x2="20" y2="4" stroke="#78716c" strokeWidth="1.5" strokeDasharray="4 3" /></svg>
+            Corequisite
+          </span>
         </span>
       </div>
-      <p className="text-sm text-stone-500">Arrows point from a prerequisite to the course that needs it; dashed means corequisite. Click a course for details.
-        Edges show every course mentioned in the prerequisite text, not the exact and/or rule.</p>
+      <p className="text-sm text-stone-500">Arrows link every course named in a prerequisite rule, not its exact and/or logic. Open a course to read the rule.</p>
       {!flow ? <Status error={error} /> : (
-        <div className="mt-3 h-[72vh] rounded-xl border border-stone-200 bg-white">
+        <div className="mt-4 h-[72vh] overflow-hidden rounded-xl border border-stone-200 bg-white">
           <ReactFlow style={{ colorScheme: 'light' }} nodes={flow.nodes} edges={flow.edges} fitView minZoom={0.1} nodesConnectable={false}
             onNodeClick={(_, n) => navigate({ to: '/courses/$code', params: { code: n.id } })}>
             <Background />

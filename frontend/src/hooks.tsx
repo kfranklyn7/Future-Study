@@ -16,5 +16,7 @@ export function useData<T>(load: () => Promise<T>, deps: unknown[]) {
 }
 
 export function Status({ error, label = 'Loading' }: { error: string | null; label?: string }) {
-  return error ? <p className="text-red-700">Error: {error}</p> : <p className="text-stone-500">{label}…</p>
+  return error
+    ? <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">Couldn't load this page. {error}</p>
+    : <p className="py-8 text-center text-stone-500">{label}…</p>
 }

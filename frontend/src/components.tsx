@@ -36,7 +36,8 @@ export function Resources({ items }: { items: Resource[] }) {
       {items.map(r => (
         <li key={r.url + r.title}>
           <a className="link" href={r.url} target="_blank" rel="noreferrer">{r.title}</a>
-          <span className="text-sm text-stone-500"> · {r.provider} · {r.type}</span>
+          <span className="text-sm text-stone-500"> {r.provider}</span>
+          {r.type && <span className="tag">{r.type}</span>}
         </li>
       ))}
     </ul>

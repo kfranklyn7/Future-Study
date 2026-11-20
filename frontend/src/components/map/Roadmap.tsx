@@ -1,4 +1,7 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 import {
   Background,
   BackgroundVariant,
@@ -68,13 +71,32 @@ export function Roadmap() {
   const [progress, setProgress] = useState<Progress>(emptyProgress)
   const [loaded, setLoaded] = useState(false)
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  // True during the landing entrance, so the first chips wait for the card to arrive.
+  const [intro, setIntro] = useState(true)
+  useEffect(() => {
+    // Long enough that no entrance chip is still mid-animation when its delay drops.
+    const t = window.setTimeout(() => setIntro(false), 2500)
+    return () => window.clearTimeout(t)
+  }, [])
   const [hoverId, setHoverId] = useState<string | null>(null)
+  // Clearing hover waits a moment so moving from one box to the next doesn't flash the
+  // whole map back to undimmed in between.
+  const hoverTimer = useRef<number | undefined>(undefined)
+  const hoverEnter = (id: string) => {
+    window.clearTimeout(hoverTimer.current)
+    setHoverId(id)
+  }
+  const hoverLeave = () => {
+    window.clearTimeout(hoverTimer.current)
+    hoverTimer.current = window.setTimeout(() => setHoverId(null), 120)
+  }
+  useEffect(() => () => window.clearTimeout(hoverTimer.current), [])
   const [rf, setRf] = useState<ReactFlowInstance<CourseFlowNode, Edge> | null>(null)
 
   // Fit the whole map once the layout has settled, and again when the window resizes.
   useEffect(() => {
     if (!rf) return
-    const fit = () => rf.fitView({ padding: '40px' })
+    const fit = () => rf.fitView({ padding: '24px' })
     const frame = requestAnimationFrame(fit)
     window.addEventListener('resize', fit)
     return () => {
@@ -180,8 +202,10 @@ export function Roadmap() {
   )
 
   const doneCount = mapNodes.filter((n) => statusOf(n.id) === 'done').length
-  const nextUp = mapNodes.filter((n) => statusOf(n.id) === 'available').map((n) => n.label)
+  const nextUp = mapNodes.filter((n) => statusOf(n.id) === 'available')
   const pct = Math.round((doneCount / mapNodes.length) * 100)
+  const takingCount = mapNodes.filter((n) => statusOf(n.id) === 'progress').length
+  const hasProgress = Object.keys(progress.status).length > 0 || progress.electives.length > 0
 
   const selected = selectedId ? mapNodeById[selectedId] : null
 
@@ -200,65 +224,88 @@ export function Roadmap() {
     }))
 
   return (
-    <div className="flex h-[calc(100vh-3.5rem)] min-h-[560px] flex-col bg-[#faf8f3] text-stone-900">
-      <header className="z-10 border-b border-stone-200 bg-white px-6 py-4">
-        <div className="flex flex-wrap items-end gap-x-8 gap-y-3">
-          <div>
-            <p className="text-xs font-semibold tracking-wider text-accent uppercase">
-              Brooklyn College · Computer and Information Science
-            </p>
-            <h1 className="text-2xl font-bold">BS in Computer Science roadmap</h1>
+    <div className="bg-[#faf8f3] text-stone-900">
+      <header className="z-10 border-b border-stone-200 px-4 pb-5 sm:px-6">
+        <div
+          className="mx-auto grid max-w-5xl gap-6 rounded-2xl border border-stone-200 bg-white p-5 shadow-[0_1px_2px_rgb(0_0_0/0.05)] motion-safe:animate-rise sm:p-6 md:grid-cols-[auto_1fr] md:items-center md:gap-0"
+          style={{ animationDelay: '180ms' }}
+        >
+          <div className="flex items-center gap-5 md:pr-8">
+            <ProgressRing pct={pct} />
+            <div>
+              <h2 className="text-sm font-medium text-stone-500">BS in Computer Science</h2>
+              <p className="mt-1 text-3xl font-semibold tracking-tight text-stone-900">
+                {doneCount}
+                <span className="text-stone-400"> / {mapNodes.length}</span>
+              </p>
+              <p className="text-sm text-stone-600">
+                courses done
+                {takingCount > 0 && <span className="text-amber-700"> · {takingCount} in progress</span>}
+              </p>
+            </div>
           </div>
 
-          <div className="min-w-[240px] flex-1">
-            <div className="flex items-baseline justify-between text-sm">
-              <span className="font-semibold">
-                {doneCount} of {mapNodes.length} done
-              </span>
-              <span className="text-stone-500">{pct}%</span>
-            </div>
-            <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-stone-200">
-              <div className="h-full rounded-full bg-green-600 transition-all duration-300" style={{ width: `${pct}%` }} />
-            </div>
-            <p className="mt-1.5 truncate text-xs text-stone-500">
-              {nextUp.length ? (
-                <>
-                  <span className="font-semibold text-stone-700">You can take next:</span> {nextUp.join(', ')}
-                </>
-              ) : (
-                'Nothing left to unlock.'
+          <div className="border-t border-stone-200 pt-5 md:border-t-0 md:border-l md:pt-0 md:pl-8">
+            <div className="flex items-baseline justify-between gap-4">
+              <h3 className="text-base font-semibold text-stone-900">Up next</h3>
+              {hasProgress && (
+                <button
+                  onClick={() => {
+                    if (confirm('Clear all progress on this map? This cannot be undone.')) setProgress(emptyProgress)
+                  }}
+                  className="text-sm text-stone-500 transition-colors hover:text-accent"
+                >
+                  Reset progress
+                </button>
               )}
-            </p>
+            </div>
+            {nextUp.length ? (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {nextUp.map((n, i) => (
+                  <button
+                    key={n.id}
+                    onClick={() => setSelectedId(n.id)}
+                    className="flex items-center gap-2 rounded-lg border border-stone-200 bg-stone-50 px-3 py-1.5 text-sm font-medium text-stone-800 transition-colors hover:border-accent/50 hover:bg-accent-soft hover:text-accent motion-safe:animate-rise"
+                    style={{ animationDelay: `${(intro ? 420 : 0) + i * 60}ms` }}
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="h-2.5 w-2.5 shrink-0 rounded-sm border"
+                      style={{ background: trackStyle[n.track].bg, borderColor: trackStyle[n.track].border }}
+                    />
+                    {n.label}
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <p className="mt-3 text-sm text-stone-600">
+                {doneCount === mapNodes.length ? 'Every course on the map is done.' : 'Finish the courses in progress to unlock more.'}
+              </p>
+            )}
           </div>
-
-          <button
-            onClick={() => {
-              if (confirm('Clear all progress on this map?')) setProgress(emptyProgress)
-            }}
-            className="rounded-md border border-stone-300 px-3 py-1.5 text-sm font-medium text-stone-700 hover:bg-stone-50"
-          >
-            Reset progress
-          </button>
         </div>
         <Legend />
       </header>
 
-      <div className="relative flex-1">
+      {/* The map gets a full screen of height to itself, below the progress card. */}
+      <div className="relative h-[calc(100vh-3.5rem)] min-h-[520px]">
         <ReactFlow
           nodes={nodes}
           edges={edges}
           nodeTypes={nodeTypes}
           onInit={setRf}
           onNodeClick={(_, node) => setSelectedId(node.id)}
-          onNodeMouseEnter={(_, node) => setHoverId(node.id)}
-          onNodeMouseLeave={() => setHoverId(null)}
+          onNodeMouseEnter={(_, node) => hoverEnter(node.id)}
+          onNodeMouseLeave={hoverLeave}
           onPaneClick={() => setSelectedId(null)}
           nodesDraggable={false}
           nodesConnectable={false}
           elementsSelectable={false}
           style={{ colorScheme: 'light' }}
+          zoomOnScroll={false}
+          preventScrolling={false}
           fitView
-          fitViewOptions={{ padding: '40px' }}
+          fitViewOptions={{ padding: '24px' }}
           minZoom={0.3}
           maxZoom={1.8}
           proOptions={{ hideAttribution: true }}
@@ -284,12 +331,78 @@ export function Roadmap() {
   )
 }
 
+function ProgressRing({ pct }: { pct: number }) {
+  const size = 88
+  const stroke = 8
+  const r = (size - stroke) / 2
+  const c = 2 * Math.PI * r
+
+  // Shown value eases toward pct. The first fill waits for the card's entrance to finish.
+  const [shown, setShown] = useState(0)
+  const shownRef = useRef(0)
+  const mountedAt = useRef(0)
+  useEffect(() => {
+    if (!mountedAt.current) mountedAt.current = performance.now()
+    if (prefersReducedMotion()) {
+      shownRef.current = pct
+      setShown(pct)
+      return
+    }
+    const from = shownRef.current
+    const delay = Math.max(0, mountedAt.current + 500 - performance.now())
+    let raf = 0
+    const timer = window.setTimeout(() => {
+      let start = 0
+      const step = (t: number) => {
+        if (!start) start = t
+        const k = Math.min(1, (t - start) / 900)
+        const v = from + (pct - from) * (1 - Math.pow(1 - k, 3))
+        shownRef.current = v
+        setShown(v)
+        if (k < 1) raf = requestAnimationFrame(step)
+      }
+      raf = requestAnimationFrame(step)
+    }, delay)
+    return () => {
+      window.clearTimeout(timer)
+      cancelAnimationFrame(raf)
+    }
+  }, [pct])
+
+  return (
+    <div className="relative shrink-0" style={{ width: size, height: size }} role="img" aria-label={`${pct}% done`}>
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true">
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#e7e5e4" strokeWidth={stroke} />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={r}
+          fill="none"
+          stroke="#16a34a"
+          strokeWidth={stroke}
+          strokeLinecap="round"
+          strokeDasharray={c}
+          strokeDashoffset={c * (1 - shown / 100)}
+          transform={`rotate(-90 ${size / 2} ${size / 2})`}
+          style={{ opacity: shown > 0.5 ? 1 : 0 }}
+        />
+      </svg>
+      <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-stone-800 tabular-nums">
+        {Math.round(shown)}%
+      </span>
+    </div>
+  )
+}
+
 const legendTracks: Track[] = ['math', 'core', 'programming', 'english']
 
 function Legend() {
   return (
-    <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs text-stone-700">
-      <ul className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+    <div
+      className="mx-auto mt-4 flex max-w-5xl flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-stone-700 motion-safe:animate-rise"
+      style={{ animationDelay: '300ms' }}
+    >
+      <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
         {legendTracks.map((t) => (
           <li key={t} className="flex items-center gap-2">
             <span
@@ -314,7 +427,7 @@ function Legend() {
           Leads to (electives)
         </li>
       </ul>
-      <p className="text-stone-500">Click a box for details, free resources, and to mark it done.</p>
+      <p className="text-stone-500">Click a course to see details and mark it done.<span className="hidden md:inline"> Ctrl + scroll to zoom.</span></p>
     </div>
   )
 }

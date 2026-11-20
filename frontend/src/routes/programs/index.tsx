@@ -15,7 +15,7 @@ function Programs() {
           <Link key={p.program_id} to="/programs/$id" params={{ id: p.program_id }} className="card">
             <h3 className="font-semibold">{p.title}</h3>
             <p className="mt-1 text-sm text-stone-500">{p.degree_levels}</p>
-            <p className="mt-1 text-sm">{p.course_count} CISC courses</p>
+            <p className="mt-3 text-sm font-medium text-accent">{p.course_count} CISC courses</p>
           </Link>
         ))}
       </div>

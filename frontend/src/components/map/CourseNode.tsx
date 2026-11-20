@@ -26,8 +26,9 @@ export function CourseNode({ data }: NodeProps<CourseFlowNode>) {
   return (
     <div
       className={[
-        'relative cursor-pointer rounded-md border-2 px-3 py-2.5 text-center shadow-[3px_3px_0_rgba(0,0,0,0.18)] transition-all duration-150',
-        'hover:-translate-y-0.5 hover:shadow-[4px_5px_0_rgba(0,0,0,0.22)]',
+        // No hover movement: shifting the box under the cursor makes it lose and regain hover in a loop.
+        'relative cursor-pointer rounded-md border-2 px-3 py-2.5 text-center shadow-[3px_3px_0_rgba(0,0,0,0.18)] transition-[box-shadow,opacity] duration-150',
+        'hover:shadow-[4px_5px_0_rgba(0,0,0,0.26)]',
         selected ? 'ring-4 ring-accent/50' : '',
         highlighted && !selected ? 'ring-2 ring-accent/35' : '',
         dimmed ? 'opacity-35' : status === 'locked' ? 'opacity-70' : '',
@@ -84,8 +85,12 @@ function StatusBadge({ status }: { status: NodeStatus }) {
       <span
         className="absolute -top-2.5 -right-2.5 flex h-6 w-6 items-center justify-center rounded-full bg-stone-500 text-[11px] text-white shadow"
         title="Prerequisites not done yet"
+        aria-label="Locked: prerequisites not done yet"
       >
-        🔒
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
+          <rect x="5" y="11" width="14" height="10" rx="2" />
+          <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+        </svg>
       </span>
     )
   return null

@@ -7,9 +7,25 @@
 @theme {
   --color-accent: #8a1538; /* Brooklyn College maroon */
   --color-accent-soft: #f6e8ed;
+
+  /* Landing entrance: fade up into place. Use with motion-safe: and an animation-delay to stagger. */
+  --animate-rise: rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 @layer base {
+  html {
+    @apply motion-safe:scroll-smooth;
+  }
   body {
     @apply bg-stone-50 text-stone-900 antialiased;
   }
@@ -17,7 +33,16 @@
 
 @layer components {
   .btn {
-    @apply inline-block cursor-pointer rounded-lg bg-accent px-4 py-2 font-semibold text-white transition-colors hover:bg-accent/90 hover:no-underline disabled:cursor-wait disabled:opacity-60;
+    @apply inline-block cursor-pointer rounded-lg bg-accent px-4 py-2 font-semibold text-white transition-colors hover:bg-accent/90 hover:no-underline focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-wait disabled:opacity-60;
+  }
+  .btn-secondary {
+    @apply inline-block cursor-pointer rounded-lg border border-stone-300 bg-white px-4 py-2 font-semibold text-stone-800 transition-colors hover:border-stone-400 hover:bg-stone-50 hover:no-underline focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:outline-none;
+  }
+  .meta {
+    @apply inline-block rounded-md bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-700;
+  }
+  .breadcrumb {
+    @apply text-sm text-stone-500;
   }
   .field {
     @apply rounded-lg border border-stone-300 bg-white px-3 py-2 text-stone-900 focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none;
@@ -45,9 +70,9 @@
     @apply bg-stone-100 text-stone-500;
   }
   .page-title {
-    @apply mt-1 mb-3 text-3xl font-bold;
+    @apply mt-1 mb-3 text-3xl font-bold tracking-tight text-balance;
   }
   .section-title {
-    @apply mt-8 mb-2 text-lg font-bold;
+    @apply mt-10 mb-3 text-lg font-semibold;
   }
 }

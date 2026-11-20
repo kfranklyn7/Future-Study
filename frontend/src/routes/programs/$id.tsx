@@ -11,18 +11,22 @@ function ProgramDetail() {
   if (!p) return <Status error={error} />
   return (
     <article>
-      <p className="text-sm text-stone-500"><Link to="/programs" className="link">Programs</Link> / {p.title}</p>
-      <h1 className="page-title">{p.title}</h1>
-      <p className="text-stone-500">
-        {p.degree_levels}{p.credits && ` · ${p.credits} credits`} · <a className="link" href={p.url} target="_blank" rel="noreferrer">brooklyn.edu</a>
-      </p>
-      <p className="my-2">{p.overview}</p>
-      <p className="my-4"><Link to="/graph" search={{ program: p.program_id }} className="btn">View prerequisite graph →</Link></p>
+      <p className="breadcrumb"><Link to="/programs" className="link">Programs</Link> / {p.title}</p>
+      <h1 className="page-title mt-2">{p.title}</h1>
+      <div className="flex flex-wrap gap-2">
+        <span className="meta">{p.degree_levels}</span>
+        {p.credits && <span className="meta">{p.credits} credits</span>}
+      </div>
+      <p className="mt-4 max-w-3xl leading-relaxed text-stone-800">{p.overview}</p>
+      <div className="mt-5 flex flex-wrap gap-3">
+        <Link to="/graph" search={{ program: p.program_id }} className="btn">View prerequisite graph</Link>
+        <a className="btn-secondary" href={p.url} target="_blank" rel="noreferrer">Program page on brooklyn.edu ↗</a>
+      </div>
       <div className="grid gap-8 md:grid-cols-2">
         <section>
           <h2 className="section-title">Career paths</h2>
           {p.careers?.map(k => (
-            <div key={k.title} className="mb-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+            <div key={k.title} className="mb-3 rounded-xl border border-stone-200 bg-white px-5 py-4">
               <h3 className="font-semibold">{k.title}</h3>
               <p className="my-1.5">{k.why}</p>
               <div className="flex flex-wrap gap-2">{k.typical_courses.map(c => <CourseLink key={c} code={c} className="chip" />)}</div>

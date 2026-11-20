@@ -74,7 +74,7 @@ export function CourseDrawer({
       {!isElective && (
         <div className="flex gap-2 border-b border-stone-200 px-6 py-3">
           <StatusButton active={status === 'done'} color="green" onClick={() => onSetStatus(status === 'done' ? null : 'done')}>
-            ✓ Done
+            Done
           </StatusButton>
           <StatusButton
             active={status === 'progress'}
@@ -84,7 +84,7 @@ export function CourseDrawer({
             Taking now
           </StatusButton>
           {status === 'locked' && (
-            <span className="ml-auto self-center text-xs text-stone-500">🔒 Prereqs not done yet</span>
+            <span className="ml-auto self-center text-xs text-stone-500">Prerequisites not done yet</span>
           )}
         </div>
       )}

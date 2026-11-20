@@ -11,12 +11,21 @@ function CourseDetail() {
   if (!c) return <Status error={error} />
   return (
     <article>
-      <p className="text-sm text-stone-500"><Link to="/courses" className="link">Courses</Link> / {c.course_code}</p>
-      <h1 className="page-title">{c.course_code}: {c.title}</h1>
-      <p className="text-stone-500">{c.division} · {c.hours || `${c.credits} credits`} {c.recent ? '' : '· not offered recently'}</p>
-      <p className="my-2">{c.description}</p>
-      {c.prerequisites && <p className="my-2 text-sm"><b>Prerequisites (official text):</b> {c.prerequisites}</p>}
-      <div className="flex gap-4">
+      <p className="breadcrumb"><Link to="/courses" className="link">Courses</Link> / {c.course_code}</p>
+      <h1 className="page-title mt-2">{c.course_code}: {c.title}</h1>
+      <div className="flex flex-wrap gap-2">
+        <span className="meta">{c.division}</span>
+        <span className="meta">{c.hours || `${c.credits} credits`}</span>
+        {!c.recent && <span className="meta text-stone-500">Not offered recently</span>}
+      </div>
+      <p className="mt-4 max-w-3xl leading-relaxed text-stone-800">{c.description}</p>
+      {c.prerequisites && (
+        <div className="mt-4 max-w-3xl rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm">
+          <div className="font-semibold text-stone-900">Catalog prerequisite rule</div>
+          <p className="mt-1 text-stone-700">{c.prerequisites}</p>
+        </div>
+      )}
+      <div className="mt-4 flex gap-4">
         {c.syllabus_urls?.map(u => <a key={u} className="link" href={u} target="_blank" rel="noreferrer">Syllabus PDF</a>)}
         {c.inventory_url && <a className="link" href={c.inventory_url} target="_blank" rel="noreferrer">Course inventory</a>}
       </div>
@@ -25,7 +34,7 @@ function CourseDetail() {
         <section>
           <h2 className="section-title">Career paths</h2>
           {c.careers.map(k => (
-            <div key={k.title} className="mb-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
+            <div key={k.title} className="mb-3 rounded-xl border border-stone-200 bg-white px-5 py-4">
               <h3 className="font-semibold">{k.title} <span className={`tag tag-${k.relevance}`}>{k.relevance}</span></h3>
               <p className="my-1.5">{k.why}</p>
               {k.next_steps?.length > 0 && <ul className="list-disc pl-5 text-sm">{k.next_steps.map(s => <li key={s}>{s}</li>)}</ul>}
