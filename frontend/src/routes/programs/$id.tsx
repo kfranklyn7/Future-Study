@@ -26,7 +26,7 @@ function ProgramDetail() {
         <section>
           <h2 className="section-title">Career paths</h2>
           {p.careers?.map(k => (
-            <div key={k.title} className="mb-3 rounded-xl border border-stone-200 bg-white px-5 py-4">
+            <div key={k.title} className="mb-3 rounded-xl border border-stone-200 bg-surface px-5 py-4">
               <h3 className="font-semibold">{k.title}</h3>
               <p className="my-1.5">{k.why}</p>
               <div className="flex flex-wrap gap-2">{k.typical_courses.map(c => <CourseLink key={c} code={c} className="chip" />)}</div>

@@ -24,7 +24,7 @@ function Careers() {
       <input type="search" aria-label="Search careers" className="field my-5 w-full max-w-sm" placeholder="Search careers" value={q}
         onChange={e => navigate({ search: { q: e.target.value || undefined }, replace: true })} />
       {rows.map(c => (
-        <details key={c.title} className="mb-3 rounded-xl border border-stone-200 bg-white px-5 py-3 open:pb-4" open={rows.length <= 3}>
+        <details key={c.title} className="mb-3 rounded-xl border border-stone-200 bg-surface px-5 py-3 open:pb-4" open={rows.length <= 3}>
           <summary className="cursor-pointer py-1 marker:text-stone-400"><span className="font-semibold">{c.title}</span> <span className="text-sm text-stone-500">{c.course_count} courses</span></summary>
           <ul className="mt-2 list-disc space-y-2 pl-5">
             {[...c.courses].sort((a, b) => relevanceRank(a.relevance) - relevanceRank(b.relevance)).map(x => (

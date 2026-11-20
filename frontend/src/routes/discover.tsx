@@ -29,7 +29,7 @@ function Discover() {
   const others = hits.filter(h => !picked.has(h.course_code))
   return (
     <>
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+      <section className="rounded-2xl border border-stone-200 bg-surface p-6 sm:p-8">
         <h1 id="discover-title" className="page-title">What are you interested in?</h1>
         <p className="text-stone-600">Describe topics, hobbies or career goals. We'll match them against every CISC course and syllabus.</p>
         <form onSubmit={submit} className="mt-4 grid gap-3">

@@ -47,19 +47,19 @@ export function CourseNode({ data }: NodeProps<CourseFlowNode>) {
 
       <div
         className={[
-          'text-[15px] leading-tight font-bold tracking-wide text-stone-900 uppercase',
+          'text-[15px] leading-tight font-bold tracking-wide text-[#1c1917] uppercase',
           done ? 'line-through decoration-2 decoration-green-700/70' : '',
         ].join(' ')}
       >
         {def.label}
       </div>
       {def.codes.length > 0 && (
-        <div className="mt-1 text-[13px] font-semibold text-stone-700">
+        <div className="mt-1 text-[13px] font-semibold text-[#44403c]">
           {def.codes.join(' or ')}
         </div>
       )}
       {def.track === 'elective' && (
-        <div className="mt-1 text-[13px] font-semibold text-stone-700">
+        <div className="mt-1 text-[13px] font-semibold text-[#44403c]">
           CISC 3000 to 4899 · {electivesPicked ?? 0}/3 picked
         </div>
       )}

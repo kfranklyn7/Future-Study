@@ -5,6 +5,7 @@ import dagre from '@dagrejs/dagre'
 import '@xyflow/react/style.css'
 import { api, type GraphData } from '#/api'
 import { Status, useData } from '#/hooks'
+import { useTheme } from '#/theme'
 
 export const Route = createFileRoute('/graph')({
   validateSearch: (s: Record<string, unknown>): { program?: string } => ({
@@ -55,6 +56,7 @@ function layout(g: GraphData): { nodes: Node[]; edges: Edge[] } {
 }
 
 function GraphPage() {
+  const theme = useTheme()
   const { program = 'computer-science-bs' } = Route.useSearch()
   const navigate = useNavigate()
   const { data: programs } = useData(api.programs, [])
@@ -85,8 +87,8 @@ function GraphPage() {
       </div>
       <p className="text-sm text-stone-500">Arrows link every course named in a prerequisite rule, not its exact and/or logic. Open a course to read the rule.</p>
       {!flow ? <Status error={error} /> : (
-        <div className="mt-4 h-[72vh] overflow-hidden rounded-xl border border-stone-200 bg-white">
-          <ReactFlow style={{ colorScheme: 'light' }} nodes={flow.nodes} edges={flow.edges} fitView minZoom={0.1} nodesConnectable={false}
+        <div className="mt-4 h-[72vh] overflow-hidden rounded-xl border border-stone-200 bg-surface">
+          <ReactFlow style={{ colorScheme: theme }} nodes={flow.nodes} edges={flow.edges} fitView minZoom={0.1} nodesConnectable={false}
             onNodeClick={(_, n) => navigate({ to: '/courses/$code', params: { code: n.id } })}>
             <Background />
             <Controls />

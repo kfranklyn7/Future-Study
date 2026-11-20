@@ -7,7 +7,7 @@ export const Route = createFileRoute('/')({ component: Home })
 function Home() {
   return (
     <>
-      <section className="relative z-[1] overflow-hidden border-b border-[#e6dccb] bg-[#f1e9dc] px-4 shadow-[0_1px_2px_-1px_rgb(80_60_40/0.1),0_6px_16px_-10px_rgb(80_60_40/0.16)] pt-16 pb-14 text-center sm:pt-20 sm:pb-16">
+      <section className="relative z-[1] overflow-hidden border-b border-hero-line bg-hero px-4 shadow-[0_1px_2px_-1px_rgb(80_60_40/0.1),0_6px_16px_-10px_rgb(80_60_40/0.16)] pt-16 pb-14 text-center sm:pt-20 sm:pb-16">
         {/* Faint warm graph-paper grid, faded out toward the edges. Sets the hero apart from the
             lighter, dotted map area below. */}
         <div
@@ -23,12 +23,12 @@ function Home() {
           }}
         />
         <h1
-          className="relative font-display text-6xl font-semibold tracking-tight text-[#3b2a22] motion-safe:animate-rise sm:text-7xl"
+          className="relative font-display text-6xl font-semibold tracking-tight text-ink motion-safe:animate-rise sm:text-7xl"
           style={{ fontVariationSettings: "'SOFT' 100, 'opsz' 144" }}
         >
-          future<span className="text-[#9a3b52]">study</span>
+          future<span className="text-rose">study</span>
         </h1>
-        <p className="relative mx-auto mt-4 max-w-xl text-lg text-pretty text-[#6f5f52] motion-safe:animate-rise" style={{ animationDelay: '90ms' }}>
+        <p className="relative mx-auto mt-4 max-w-xl text-lg text-pretty text-ink-muted motion-safe:animate-rise" style={{ animationDelay: '90ms' }}>
           plan your future cs degree here
         </p>
       </section>

@@ -20,7 +20,7 @@ function CourseDetail() {
       </div>
       <p className="mt-4 max-w-3xl leading-relaxed text-stone-800">{c.description}</p>
       {c.prerequisites && (
-        <div className="mt-4 max-w-3xl rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm">
+        <div className="mt-4 max-w-3xl rounded-lg border border-stone-200 bg-surface px-4 py-3 text-sm">
           <div className="font-semibold text-stone-900">Catalog prerequisite rule</div>
           <p className="mt-1 text-stone-700">{c.prerequisites}</p>
         </div>
@@ -34,7 +34,7 @@ function CourseDetail() {
         <section>
           <h2 className="section-title">Career paths</h2>
           {c.careers.map(k => (
-            <div key={k.title} className="mb-3 rounded-xl border border-stone-200 bg-white px-5 py-4">
+            <div key={k.title} className="mb-3 rounded-xl border border-stone-200 bg-surface px-5 py-4">
               <h3 className="font-semibold">{k.title} <span className={`tag tag-${k.relevance}`}>{k.relevance}</span></h3>
               <p className="my-1.5">{k.why}</p>
               {k.next_steps?.length > 0 && <ul className="list-disc pl-5 text-sm">{k.next_steps.map(s => <li key={s}>{s}</li>)}</ul>}

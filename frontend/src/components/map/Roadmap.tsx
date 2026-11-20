@@ -17,6 +17,7 @@ import '@xyflow/react/style.css'
 import { ELECTIVES_NEEDED, mapEdges, mapNodeById, mapNodes, trackStyle, type Track } from '#/data/csMap'
 import { CourseNode, NODE_WIDTH, type CourseFlowNode, type NodeStatus } from '#/components/map/CourseNode'
 import { CourseDrawer } from '#/components/map/CourseDrawer'
+import { useTheme } from '#/theme'
 
 
 const nodeTypes: NodeTypes = { course: CourseNode }
@@ -68,6 +69,8 @@ function ancestors(id: string, acc = new Set<string>()) {
 }
 
 export function Roadmap() {
+  const theme = useTheme()
+  const dark = theme === 'dark'
   const [progress, setProgress] = useState<Progress>(emptyProgress)
   const [loaded, setLoaded] = useState(false)
   const [selectedId, setSelectedId] = useState<string | null>(null)
@@ -182,7 +185,7 @@ export function Roadmap() {
           focusSet.has(e.target) &&
           (e.target === focusId || e.source === focusId || ancestors(focusId).has(e.target))
         const done = statusOf(e.source) === 'done' && statusOf(e.target) === 'done'
-        const color = lit ? '#8a1538' : done ? '#2f8f46' : '#44403c'
+        const color = lit ? (dark ? '#d0627f' : '#8a1538') : done ? '#2f8f46' : dark ? '#968b80' : '#44403c'
         return {
           id: `${e.source}->${e.target}`,
           source: e.source,
@@ -198,7 +201,7 @@ export function Roadmap() {
           },
         }
       }),
-    [focusId, focusSet, statusOf],
+    [focusId, focusSet, statusOf, dark],
   )
 
   const doneCount = mapNodes.filter((n) => statusOf(n.id) === 'done').length
@@ -224,10 +227,10 @@ export function Roadmap() {
     }))
 
   return (
-    <div className="bg-[#faf8f3] text-stone-900">
+    <div className="bg-map text-stone-900">
       <header className="z-10 border-b border-stone-200 px-4 pt-6 pb-5 sm:px-6">
         <div
-          className="mx-auto grid max-w-5xl gap-6 rounded-2xl border border-stone-200 bg-[#fdfbf7] p-5 shadow-[0_1px_2px_rgb(0_0_0/0.05)] motion-safe:animate-rise sm:p-6 md:grid-cols-[auto_1fr] md:items-center md:gap-0"
+          className="mx-auto grid max-w-5xl gap-6 rounded-2xl border border-stone-200 bg-panel p-5 shadow-[0_1px_2px_rgb(0_0_0/0.05)] motion-safe:animate-rise sm:p-6 md:grid-cols-[auto_1fr] md:items-center md:gap-0"
           style={{ animationDelay: '180ms' }}
         >
           <div className="flex items-center gap-5 md:pr-8">
@@ -265,7 +268,7 @@ export function Roadmap() {
                   <button
                     key={n.id}
                     onClick={() => setSelectedId(n.id)}
-                    className="flex items-center gap-2 rounded-lg border border-stone-200 bg-[#f6f2ea] px-3 py-1.5 text-sm font-medium text-stone-800 transition-colors hover:border-accent/50 hover:bg-accent-soft hover:text-accent motion-safe:animate-rise"
+                    className="flex items-center gap-2 rounded-lg border border-stone-200 bg-panel-muted px-3 py-1.5 text-sm font-medium text-stone-800 transition-colors hover:border-accent/50 hover:bg-accent-soft hover:text-accent motion-safe:animate-rise"
                     style={{ animationDelay: `${(intro ? 420 : 0) + i * 60}ms` }}
                   >
                     <span
@@ -301,7 +304,7 @@ export function Roadmap() {
           nodesDraggable={false}
           nodesConnectable={false}
           elementsSelectable={false}
-          style={{ colorScheme: 'light' }}
+          style={{ colorScheme: theme }}
           zoomOnScroll={false}
           preventScrolling={false}
           fitView
@@ -310,7 +313,7 @@ export function Roadmap() {
           maxZoom={1.8}
           proOptions={{ hideAttribution: true }}
         >
-          <Background variant={BackgroundVariant.Dots} gap={22} size={1.2} color="#d6d3d1" />
+          <Background variant={BackgroundVariant.Dots} gap={22} size={1.2} color={dark ? '#4a433c' : '#d6d3d1'} />
           <Controls showInteractive={false} position="bottom-left" />
         </ReactFlow>
 
@@ -372,7 +375,7 @@ function ProgressRing({ pct }: { pct: number }) {
   return (
     <div className="relative shrink-0" style={{ width: size, height: size }} role="img" aria-label={`${pct}% done`}>
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true">
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#e7e5e4" strokeWidth={stroke} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" className="stroke-stone-200" strokeWidth={stroke} />
         <circle
           cx={size / 2}
           cy={size / 2}
@@ -422,7 +425,7 @@ function Legend() {
         </li>
         <li className="flex items-center gap-2">
           <svg width="20" height="8">
-            <line x1="0" y1="4" x2="20" y2="4" stroke="#44403c" strokeWidth="1.5" strokeDasharray="4 3" />
+            <line x1="0" y1="4" x2="20" y2="4" className="stroke-stone-700" strokeWidth="1.5" strokeDasharray="4 3" />
           </svg>
           Leads to (electives)
         </li>

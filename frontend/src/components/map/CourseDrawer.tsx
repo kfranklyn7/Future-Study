@@ -45,7 +45,7 @@ export function CourseDrawer({
 
   return (
     <aside
-      className="absolute inset-y-0 right-0 z-20 flex w-full max-w-[460px] flex-col border-l border-stone-300 bg-white shadow-2xl"
+      className="absolute inset-y-0 right-0 z-20 flex w-full max-w-[460px] flex-col border-l border-stone-300 bg-surface shadow-2xl"
       aria-label={`${def.label} details`}
     >
       <header className="flex items-start gap-3 border-b border-stone-200 px-6 pt-5 pb-4">
@@ -102,7 +102,7 @@ export function CourseDrawer({
                 onClick={() => setTab(i)}
                 className={[
                   'flex-1 rounded-md px-3 py-1.5 text-sm font-medium',
-                  i === tab ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-900',
+                  i === tab ? 'bg-surface text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-900',
                 ].join(' ')}
               >
                 {o.code}

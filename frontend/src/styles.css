@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Dark mode is a `dark` class on <html> (set before first paint in index.html, toggled by
+   ThemeToggle). Most of the app flips on its own: the dark theme below remaps the stone
+   scale and the surface tokens, so `bg-stone-50`, `text-stone-900`, `bg-surface` and friends
+   need no `dark:` variants. Use `dark:` only for the odd case the remap doesn't cover. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* The app's only stylesheet. Pages style themselves with Tailwind classes; the few
    repeated patterns below are Tailwind component classes so they stay layered and
    any utility class can still override them. */
@@ -7,6 +13,17 @@
 @theme {
   --color-accent: #8a1538; /* Brooklyn College maroon */
   --color-accent-soft: #f6e8ed;
+
+  /* Surfaces. Use these instead of white or hex values so dark mode can swap them. */
+  --color-surface: #ffffff; /* header, cards, fields */
+  --color-map: #faf8f3; /* course map area */
+  --color-panel: #fdfbf7; /* progress card */
+  --color-panel-muted: #f6f2ea; /* chips inside the progress card */
+  --color-hero: #f1e9dc;
+  --color-hero-line: #e6dccb;
+  --color-ink: #3b2a22; /* wordmark espresso */
+  --color-ink-muted: #6f5f52;
+  --color-rose: #9a3b52; /* wordmark rosewood */
 
   /* Wordmark: Fraunces (loaded in index.html) with its soft, rounded setting. */
   --font-display: 'Fraunces', Georgia, serif;
@@ -26,6 +43,52 @@
 }
 
 @layer base {
+  /* Dark theme: warm charcoal, matching the beige light theme. The stone scale runs in
+     reverse, so light text on dark surfaces comes for free. */
+  .dark {
+    color-scheme: dark;
+
+    --color-accent: #d0627f;
+    --color-accent-soft: #3a222a;
+
+    --color-surface: #221e1b;
+    --color-map: #1a1715;
+    --color-panel: #24201c;
+    --color-panel-muted: #2d2823;
+    --color-hero: #211c18;
+    --color-hero-line: #332c26;
+    --color-ink: #f1e6da;
+    --color-ink-muted: #b5a698;
+    --color-rose: #e48aa0;
+
+    --color-stone-50: #1a1715;
+    --color-stone-100: #26221e;
+    --color-stone-200: #36302b;
+    --color-stone-300: #4a433c;
+    --color-stone-400: #6e655c;
+    --color-stone-500: #968b80;
+    --color-stone-600: #b4aa9f;
+    --color-stone-700: #cec5bb;
+    --color-stone-800: #e3dbd2;
+    --color-stone-900: #f2ece5;
+    --color-stone-950: #faf7f3;
+
+    /* Status tints (errors, notes, badges) toned down for dark backgrounds. */
+    --color-red-50: #3a1c1c;
+    --color-red-200: #6b2c2c;
+    --color-red-800: #f5b4b4;
+    --color-amber-50: #352a17;
+    --color-amber-100: #44351a;
+    --color-amber-200: #6b5323;
+    --color-amber-700: #f0b45a;
+    --color-amber-800: #f3c47a;
+    --color-amber-900: #f6d59c;
+    --color-green-50: #17301f;
+    --color-green-100: #1d3b26;
+    --color-green-700: #6cc788;
+    --color-green-800: #8fd6a4;
+  }
+
   html {
     @apply motion-safe:scroll-smooth;
   }
@@ -39,7 +102,7 @@
     @apply inline-block cursor-pointer rounded-lg bg-accent px-4 py-2 font-semibold text-white transition-colors hover:bg-accent/90 hover:no-underline focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-wait disabled:opacity-60;
   }
   .btn-secondary {
-    @apply inline-block cursor-pointer rounded-lg border border-stone-300 bg-white px-4 py-2 font-semibold text-stone-800 transition-colors hover:border-stone-400 hover:bg-stone-50 hover:no-underline focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:outline-none;
+    @apply inline-block cursor-pointer rounded-lg border border-stone-300 bg-surface px-4 py-2 font-semibold text-stone-800 transition-colors hover:border-stone-400 hover:bg-stone-50 hover:no-underline focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:outline-none;
   }
   .meta {
     @apply inline-block rounded-md bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-700;
@@ -48,10 +111,10 @@
     @apply text-sm text-stone-500;
   }
   .field {
-    @apply rounded-lg border border-stone-300 bg-white px-3 py-2 text-stone-900 focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none;
+    @apply rounded-lg border border-stone-300 bg-surface px-3 py-2 text-stone-900 focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none;
   }
   .card {
-    @apply block rounded-xl border border-stone-200 bg-white p-4 text-stone-900 transition-colors hover:border-accent hover:no-underline;
+    @apply block rounded-xl border border-stone-200 bg-surface p-4 text-stone-900 transition-colors hover:border-accent hover:no-underline;
   }
   .chip {
     @apply inline-block cursor-pointer rounded-full bg-accent-soft px-3 py-0.5 text-sm font-medium text-accent hover:no-underline;

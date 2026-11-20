@@ -1,5 +1,7 @@
 import { Link, Outlet, createRootRoute, useRouterState } from '@tanstack/react-router'
 
+import { ThemeToggle } from '#/theme'
+
 import '../styles.css'
 
 export const Route = createRootRoute({
@@ -29,12 +31,12 @@ function RootComponent() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-30 h-14 shrink-0 border-b border-stone-200 bg-white">
+      <header className="sticky top-0 z-30 h-14 shrink-0 border-b border-stone-200 bg-surface">
         <div className="flex h-full items-center gap-4 px-4 sm:px-6 md:grid md:grid-cols-[1fr_auto_1fr]">
-          <Link to="/" className="shrink-0 justify-self-start font-display text-xl font-semibold tracking-tight text-[#3b2a22] hover:no-underline"
+          <Link to="/" className="shrink-0 justify-self-start font-display text-xl font-semibold tracking-tight text-ink hover:no-underline"
             style={{ fontVariationSettings: "'SOFT' 100" }}
           >
-            future<span className="text-[#9a3b52]">study</span>
+            future<span className="text-rose">study</span>
           </Link>
           <nav aria-label="Main" className="flex min-w-0 gap-1 overflow-x-auto [scrollbar-width:none] text-sm font-medium whitespace-nowrap">
             {NAV.map((n) => (
@@ -49,8 +51,8 @@ function RootComponent() {
               </Link>
             ))}
           </nav>
-          {/* Empty third column keeps the nav centered on wide screens. */}
-          <div className="hidden md:block" />
+          {/* Third column keeps the nav centered on wide screens. */}
+          <ThemeToggle className="ml-auto md:ml-0 md:justify-self-end" />
         </div>
       </header>
       <main className={fullBleed ? 'flex-1' : 'mx-auto w-full max-w-6xl flex-1 px-4 pt-8 pb-16 sm:px-8'}>

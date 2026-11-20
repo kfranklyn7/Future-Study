@@ -11,6 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&display=swap"
     />
     <title>futurestudy</title>
+    <script>
+      // Apply the saved theme (or the OS setting) before first paint so dark mode doesn't flash light.
+      try {
+        var t = localStorage.getItem('future-study:theme')
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.classList.add('dark')
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="app"></div>

@@ -38,7 +38,7 @@ function Courses() {
         </label>
       </div>
       {!rows ? <Status error={error} /> : (
-        <div className="overflow-x-auto rounded-xl border border-stone-200 bg-white">
+        <div className="overflow-x-auto rounded-xl border border-stone-200 bg-surface">
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-b border-stone-200 bg-stone-50 text-xs text-stone-500 uppercase">
