@@ -16,5 +16,5 @@ export function useData<T>(load: () => Promise<T>, deps: unknown[]) {
 }
 
 export function Status({ error, label = 'Loading' }: { error: string | null; label?: string }) {
-  return error ? <p className="error">Error: {error}</p> : <p className="muted">{label}…</p>
+  return error ? <p className="text-red-700">Error: {error}</p> : <p className="text-stone-500">{label}…</p>
 }

@@ -9,13 +9,13 @@ function Programs() {
   if (!data) return <Status error={error} />
   return (
     <>
-      <h1>Programs</h1>
-      <div className="grid">
+      <h1 className="page-title">Programs</h1>
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-4">
         {data.map(p => (
           <Link key={p.program_id} to="/programs/$id" params={{ id: p.program_id }} className="card">
-            <h3>{p.title}</h3>
-            <p className="muted small">{p.degree_levels}</p>
-            <p className="small">{p.course_count} CISC courses</p>
+            <h3 className="font-semibold">{p.title}</h3>
+            <p className="mt-1 text-sm text-stone-500">{p.degree_levels}</p>
+            <p className="mt-1 text-sm">{p.course_count} CISC courses</p>
           </Link>
         ))}
       </div>

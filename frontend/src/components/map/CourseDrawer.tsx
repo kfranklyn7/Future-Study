@@ -128,7 +128,7 @@ export function CourseDrawer({
                 <button
                   key={id}
                   onClick={() => onSelect(id)}
-                  className="rounded-full border border-stone-300 px-3 py-1 text-sm text-stone-700 hover:border-indigo-400 hover:text-indigo-700"
+                  className="rounded-full border border-stone-300 px-3 py-1 text-sm text-stone-700 hover:border-accent/60 hover:text-accent"
                 >
                   {mapNodeById[id].label}
                 </button>
@@ -167,7 +167,7 @@ export function CourseDrawer({
         <Section title="Career paths">
           <div className="flex flex-wrap gap-2">
             {def.careers.map((c) => (
-              <span key={c} className="rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700">
+              <span key={c} className="rounded-full bg-accent-soft px-3 py-1 text-sm font-medium text-accent">
                 {c}
               </span>
             ))}
@@ -182,13 +182,13 @@ export function CourseDrawer({
                   href={r.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex items-center gap-2 rounded-md border border-stone-200 px-3 py-2 hover:border-indigo-300 hover:bg-indigo-50/50"
+                  className="group flex items-center gap-2 rounded-md border border-stone-200 px-3 py-2 hover:border-accent/60 hover:bg-accent-soft/50"
                 >
                   <span className="rounded bg-stone-100 px-1.5 py-0.5 text-[11px] font-semibold text-stone-600 uppercase">
                     {kindLabel[r.kind]}
                   </span>
-                  <span className="text-sm text-stone-800 group-hover:text-indigo-700">{r.title}</span>
-                  <span className="ml-auto text-stone-400 group-hover:text-indigo-500">↗</span>
+                  <span className="text-sm text-stone-800 group-hover:text-accent">{r.title}</span>
+                  <span className="ml-auto text-stone-400 group-hover:text-accent">↗</span>
                 </a>
               </li>
             ))}
@@ -225,12 +225,12 @@ function CourseDetails({ course }: { course: CourseInfo }) {
       {(course.syllabusUrl || course.catalogUrl) && (
         <div className="flex flex-wrap gap-3 text-sm">
           {course.syllabusUrl && (
-            <a href={course.syllabusUrl} target="_blank" rel="noreferrer" className="font-medium text-indigo-700 hover:underline">
+            <a href={course.syllabusUrl} target="_blank" rel="noreferrer" className="font-medium text-accent hover:underline">
               Syllabus (PDF) ↗
             </a>
           )}
           {course.catalogUrl && (
-            <a href={course.catalogUrl} target="_blank" rel="noreferrer" className="font-medium text-indigo-700 hover:underline">
+            <a href={course.catalogUrl} target="_blank" rel="noreferrer" className="font-medium text-accent hover:underline">
               Catalog entry ↗
             </a>
           )}

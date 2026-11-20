@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CareersRouteImport } from './routes/careers'
+import { Route as DiscoverRouteImport } from './routes/discover'
 import { Route as GraphRouteImport } from './routes/graph'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as CoursesIndexRouteImport } from './routes/courses/index'
@@ -26,6 +27,11 @@ const IndexRoute = IndexRouteImport.update({
 const CareersRoute = CareersRouteImport.update({
   id: '/careers',
   path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiscoverRoute = DiscoverRouteImport.update({
+  id: '/discover',
+  path: '/discover',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GraphRoute = GraphRouteImport.update({
@@ -62,6 +68,7 @@ const ProgramsIdRoute = ProgramsIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/discover': typeof DiscoverRoute
   '/graph': typeof GraphRoute
   '/map': typeof MapRoute
   '/courses/$code': typeof CoursesCodeRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/discover': typeof DiscoverRoute
   '/graph': typeof GraphRoute
   '/map': typeof MapRoute
   '/courses/$code': typeof CoursesCodeRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/discover': typeof DiscoverRoute
   '/graph': typeof GraphRoute
   '/map': typeof MapRoute
   '/courses/$code': typeof CoursesCodeRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/careers'
+    | '/discover'
     | '/graph'
     | '/map'
     | '/courses/$code'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/careers'
+    | '/discover'
     | '/graph'
     | '/map'
     | '/courses/$code'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/careers'
+    | '/discover'
     | '/graph'
     | '/map'
     | '/courses/$code'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CareersRoute: typeof CareersRoute
+  DiscoverRoute: typeof DiscoverRoute
   GraphRoute: typeof GraphRoute
   MapRoute: typeof MapRoute
   CoursesCodeRoute: typeof CoursesCodeRoute
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/careers'
       fullPath: '/careers'
       preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/discover': {
+      id: '/discover'
+      path: '/discover'
+      fullPath: '/discover'
+      preLoaderRoute: typeof DiscoverRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/graph': {
@@ -198,6 +218,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CareersRoute: CareersRoute,
+  DiscoverRoute: DiscoverRoute,
   GraphRoute: GraphRoute,
   MapRoute: MapRoute,
   CoursesCodeRoute: CoursesCodeRoute,

@@ -6,37 +6,37 @@ export const DIVISIONS = ['', 'Undergraduate', 'Graduate']
 
 export function DivisionSelect({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   return (
-    <select value={value} onChange={e => onChange(e.target.value)}>
+    <select className="field" value={value} onChange={e => onChange(e.target.value)}>
       {DIVISIONS.map(d => <option key={d} value={d}>{d || 'All levels'}</option>)}
     </select>
   )
 }
 
-export function CourseLink({ code, className, children }: { code: string; className?: string; children?: ReactNode }) {
+export function CourseLink({ code, className = 'link', children }: { code: string; className?: string; children?: ReactNode }) {
   return <Link to="/courses/$code" params={{ code }} className={className}>{children ?? code}</Link>
 }
 
 export function CourseList({ items, empty }: { items: { course_code: string; title: string | null }[]; empty: string }) {
-  if (!items.length) return <p className="muted">{empty}</p>
+  if (!items.length) return <p className="text-stone-500">{empty}</p>
   return (
-    <ul>
+    <ul className="list-disc space-y-1 pl-5">
       {items.map(i => <li key={i.course_code}>
         {i.title
           ? <CourseLink code={i.course_code}>{i.course_code} {i.title}</CourseLink>
-          : <span className="muted">{i.course_code} (outside CISC)</span>}
+          : <span className="text-stone-500">{i.course_code} (outside CISC)</span>}
       </li>)}
     </ul>
   )
 }
 
 export function Resources({ items }: { items: Resource[] }) {
-  if (!items.length) return <p className="muted">None yet.</p>
+  if (!items.length) return <p className="text-stone-500">None yet.</p>
   return (
-    <ul className="resources">
+    <ul className="list-disc space-y-1.5 pl-5">
       {items.map(r => (
         <li key={r.url + r.title}>
-          <a href={r.url} target="_blank" rel="noreferrer">{r.title}</a>
-          <span className="small muted"> · {r.provider} · {r.type}</span>
+          <a className="link" href={r.url} target="_blank" rel="noreferrer">{r.title}</a>
+          <span className="text-sm text-stone-500"> · {r.provider} · {r.type}</span>
         </li>
       ))}
     </ul>

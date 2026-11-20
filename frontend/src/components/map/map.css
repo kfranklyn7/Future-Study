@@ -1,7 +1,0 @@
-/* app.css styles bare elements (button, a, header, h1, p, ul, input) without a
-   cascade layer, so those rules beat every layered rule: Tailwind utilities and
-   React Flow's own CSS (@layer xyflow). Inside the map, roll them back so the
-   layered styles apply. */
-.fs-map.fs-map :is(button, a, header, h1, h2, h3, p, ul, li, input) {
-  all: revert-layer;
-}

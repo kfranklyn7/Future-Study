@@ -28,8 +28,8 @@ export function CourseNode({ data }: NodeProps<CourseFlowNode>) {
       className={[
         'relative cursor-pointer rounded-md border-2 px-3 py-2.5 text-center shadow-[3px_3px_0_rgba(0,0,0,0.18)] transition-all duration-150',
         'hover:-translate-y-0.5 hover:shadow-[4px_5px_0_rgba(0,0,0,0.22)]',
-        selected ? 'ring-4 ring-indigo-500/60' : '',
-        highlighted && !selected ? 'ring-2 ring-indigo-400/70' : '',
+        selected ? 'ring-4 ring-accent/50' : '',
+        highlighted && !selected ? 'ring-2 ring-accent/35' : '',
         dimmed ? 'opacity-35' : status === 'locked' ? 'opacity-70' : '',
       ].join(' ')}
       style={{
