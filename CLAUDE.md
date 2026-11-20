@@ -6,7 +6,11 @@ Snowflake" prize, so core features should run on Snowflake (tables + Cortex AI).
 
 ## Current state
 
-The project is at the data stage. There is no app yet.
+Data pipeline, Snowflake AI enrichment, Go API (`backend/`) and React app (`frontend/`) are in
+place. See README.md for setup and the API. App data lives in `CISC.CORE` (the older
+`CISC.PUBLIC` tables, some with quoted names like `"Course Requisites"`, are not used).
+AI output (`COURSE_AI`, `PROGRAM_AI`, `COURSE_CAREERS`, `CAREER_CANON`, `RESOURCES`) is
+precomputed by `snowflake/ai_enrichment.sql`; only `/api/recommend` calls Cortex live.
 
 - `scrape_brooklyn_cis.py`: the main scraper. Pulls CIS programs, the course inventory,
   undergraduate and graduate bulletin PDFs, department schedules, syllabi, related PDFs and
