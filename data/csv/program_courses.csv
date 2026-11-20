@@ -1,0 +1,72 @@
+program_id,course_code,raw_mention,scraped_at
+cognitive-science-minor,CISC 1115,Computer and Information Science 1115,2026-11-20T16:41:34+00:00
+cognitive-science-minor,CISC 1410,Computer and Information Science 1410,2026-11-20T16:41:34+00:00
+computational-mathematics-bs,CISC 2210,Computer and Information Science 2210,2026-11-20T16:41:34+00:00
+computational-mathematics-bs,CISC 1115,Computer and Information Science 1115,2026-11-20T16:41:34+00:00
+computational-mathematics-bs,CISC 3240,Computer and Information Science 3240,2026-11-20T16:41:34+00:00
+computational-mathematics-bs,CISC 3820,Computer and Information Science 3820,2026-11-20T16:41:34+00:00
+computational-mathematics-bs,CISC 3142,Computer and Information Science 3142,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 1115,Computer and Information Science 1115,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 2210,Computer and Information Science 2210,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 7300X,CISC 7300X,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 3310,CISC 3310,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 7312X,CISC 7312X,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 3320,CISC 3320,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 7200X,CISC 7200X,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 3220,CISC 3220,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 7220X,CISC 7220X,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 3230,CISC 3230,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 2820W,Computer and Information Science 2820W,2026-11-20T16:41:34+00:00
+computer-science-bs,CISC 7120X,CISC 7120X,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7540,CISC 7540,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7510,CISC 7510,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7700,CISC 7700,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7302,CISC 7302,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7000,CISC 7000,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7990G,CISC 7990G,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7980G,CISC 7980G,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 1115,CISC 1115,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 2210,CISC 2210,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 3115,CISC 3115,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 3130,CISC 3130,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 3310,CISC 3310,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7200,CISC 7200,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7221,CISC 7221,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7500,CISC 7500,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7530,CISC 7530,2026-11-20T16:41:34+00:00
+computer-science-ms,CISC 7450X,CISC 7450X,2026-11-20T16:41:34+00:00
+computer-science-minor,CISC 3130,Computer and Information Science 3130,2026-11-20T16:41:34+00:00
+computer-science-minor,CISC 7120X,CISC 7120X,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 3225,Computer and Information Science 3225,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 2210,Computer and Information Science 2210,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 1410,Computer and Information Science 1410,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 1215,Computer and Information Science 1215,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 7700X,CISC 7700X,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 7412X,CISC 7412X,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 7440X,CISC 7440X,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 7704X,CISC 7704X,2026-11-20T16:41:34+00:00
+data-science-minor,CISC 3440,CISC 3440,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 1115,Computer and Information Science 1115,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 1050,Computer and Information Science 1050,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 3810,Computer and Information Science 3810,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 3140,Computer and Information Science 3140,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 2820W,Computer and Information Science 2820W,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 1590,Computer and Information Science 1590,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 2531,Computer and Information Science 2531,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 1530,Computer and Information Science 1530,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 2532,Computer and Information Science 2532,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 1580W,Computer and Information Science 1580W,2026-11-20T16:41:34+00:00
+information-systems-bs,CISC 2590,Computer and Information Science 2590,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 1115,Computer and Information Science 1115,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 7200X,CISC 7200X,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 3220,CISC 3220,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 3650,Computer and Information Science 3650,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 3140,Computer and Information Science 3140,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 7410X,CISC 7410X,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 7120X,CISC 7120X,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 3142,CISC 3142,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 7510X,CISC 7510X,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 3810,CISC 3810,2026-11-20T16:41:34+00:00
+multimedia-computing-bs,CISC 2600,CISC 2600,2026-11-20T16:41:34+00:00
+multimedia-computing-minor,CISC 1115,Computer and Information Science 1115,2026-11-20T16:41:34+00:00
+multimedia-computing-minor,CISC 3610,Computer and Information Science 3610,2026-11-20T16:41:34+00:00
