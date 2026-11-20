@@ -11,3 +11,4 @@ course_offerings.csv,145,13,Department schedule rows from the undergraduate and 
 syllabi.csv,91,11,Syllabus PDFs linked from the CIS undergraduate and graduate resource pages.
 related_documents.csv,9,9,"Other PDFs linked from those pages, such as prerequisite diagrams and checklists."
 degree_map_courses.csv,1135,12,"Courses on four-year degree maps for the CIS programs, by bulletin year."
+rmp_professors.csv,115,12,"Rate My Professors ratings for Brooklyn College professors whose RMP course tags match a CISC course in course_offerings.csv (scrape_rmp.py)."
