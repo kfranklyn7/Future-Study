@@ -31,7 +31,7 @@ from scrape_brooklyn_cis import (
     COURSE_SHOW_URL,
     REQUEST_PAUSE_SECONDS,
     extract_credits,
-    extract_requisite_refs,
+    grouped_requisite_refs,
     make_session,
     split_prerequisites,
     squash,
@@ -162,7 +162,9 @@ def main() -> None:
             row = lookup(fetcher, code)
             row["depth"] = level
             courses[code] = row
-            for relationship, dept, number in extract_requisite_refs(row["prerequisites"], default_dept=row["dept"]):
+            for relationship, dept, number, group, operator in grouped_requisite_refs(
+                row["prerequisites"], default_dept=row["dept"]
+            ):
                 requires = f"{dept} {number}"
                 if requires == code:
                     continue
@@ -173,6 +175,8 @@ def main() -> None:
                         "requires_dept": dept,
                         "requires_number": number,
                         "relationship": relationship,
+                        "group_id": f"{code}-g{group}",
+                        "group_operator": operator,
                         "source": "inventory",
                     }
                 )
@@ -188,7 +192,8 @@ def main() -> None:
     course_frame = pd.DataFrame(courses.values()).sort_values("course_code")
     edge_frame = pd.DataFrame(
         edges,
-        columns=["course_code", "requires_code", "requires_dept", "requires_number", "relationship", "source"],
+        columns=["course_code", "requires_code", "requires_dept", "requires_number", "relationship",
+                 "group_id", "group_operator", "source"],
     ).drop_duplicates()
     edge_frame["in_prereq_courses"] = edge_frame["requires_code"].isin(known)
     edge_frame["in_cisc_catalog"] = edge_frame["requires_dept"].eq("CISC")

@@ -1118,6 +1118,79 @@ def extract_requisite_refs(text: str, default_dept: str = "CISC") -> list[tuple[
     return refs
 
 
+_DEPT_NAME_RE = re.compile(
+    r"\b(" + "|".join(re.escape(name) for name in sorted(REQUISITE_DEPARTMENTS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+_BOTH_OF_RE = re.compile(r"\bboth\s+(?:of\s+)?([^,;]*?)\s+and\s+", re.IGNORECASE)
+# After department names become codes, a clause is codes and course numbers.
+_CODE_OR_NUMBER_RE = re.compile(
+    r"\b(" + "|".join(sorted(set(REQUISITE_DEPARTMENTS.values()))) + r")\b"
+    r"|(?<![\d.])\*?(\d{4}[A-Z]?)(?!\d)(?!\.\d)",
+)
+# Required clauses are split by semicolons (unless the next clause starts with "or") and by "and".
+_AND_SPLIT_RE = re.compile(r";(?!\s*or\b)\s*|,?\s+and\s+", re.IGNORECASE)
+_OR_RE = re.compile(r"\b(?:or|either)\b", re.IGNORECASE)
+
+
+def grouped_requisite_refs(text: str, default_dept: str = "CISC") -> list[tuple[str, str, str, int, str]]:
+    """Like extract_requisite_refs, plus each course's group in the rule.
+
+    Returns (relationship, dept, number, group_index, operator). Clauses separated by
+    semicolons or "and" are all required; courses listed with "or" in one clause form a
+    one_of group. "Both of 1113 and 1114" stays inside its clause, so a pair offered as one
+    alternative is shown as two separate alternatives. Courses outside any "or" list get
+    their own all group. Nested rules ("3110 and either 1115 or 1170") are approximated.
+    """
+    if not text or not str(text).strip():
+        return []
+    raw = str(text).strip()
+    if not _REQUISITE_LABEL_RE.match(raw):
+        raw = "Prerequisite: " + raw
+    segments: list[tuple[str, str]] = []
+    kind = "prerequisite"
+    position = 0
+    for match in _REQUISITE_LABEL_RE.finditer(raw):
+        body = raw[position:match.start()].strip(" ;,.")
+        if body and position > 0:
+            segments.append((kind, body))
+        kind = _requisite_kind(match.group(1))
+        position = match.end()
+    tail = raw[position:].strip(" ;,.")
+    if tail:
+        segments.append((kind, tail))
+
+    refs: list[tuple[str, str, str, int, str]] = []
+    seen: set[tuple[str, str, str, int]] = set()
+    group = 0
+    for relationship, body in segments:
+        # Department names to codes first, so "Computer and Information Science" isn't split on "and".
+        body = _DEPT_NAME_RE.sub(lambda m: REQUISITE_DEPARTMENTS[m.group(1).lower()], body)
+        body = _BOTH_OF_RE.sub(lambda m: f"both of {m.group(1)} & ", body)
+        department = default_dept
+        for clause in _AND_SPLIT_RE.split(body):
+            members: list[tuple[str, str]] = []
+            for match in _CODE_OR_NUMBER_RE.finditer(clause):
+                if match.group(1):
+                    department = match.group(1)
+                    continue
+                members.append((department, match.group(2).upper()))
+            if not members:
+                continue
+            if len(members) > 1 and _OR_RE.search(clause):
+                group += 1
+                for dept, number in members:
+                    if (relationship, dept, number, group) not in seen:
+                        seen.add((relationship, dept, number, group))
+                        refs.append((relationship, dept, number, group, "one_of"))
+            else:
+                for dept, number in members:
+                    group += 1
+                    seen.add((relationship, dept, number, group))
+                    refs.append((relationship, dept, number, group, "all"))
+    return refs
+
+
 def build_requisites(courses: pd.DataFrame, program_ids: set[str]) -> pd.DataFrame:
     """Catalog prerequisite edges plus other-department major requirements.
 
@@ -1162,10 +1235,12 @@ def build_requisites(courses: pd.DataFrame, program_ids: set[str]) -> pd.DataFra
         for record in courses.itertuples(index=False):
             code = record.course_code
             mentioned_math: set[str] = set()
-            for relationship, department, number in extract_requisite_refs(getattr(record, "prerequisites", "")):
+            for relationship, department, number, group, operator in grouped_requisite_refs(
+                getattr(record, "prerequisites", "")
+            ):
                 if f"{department} {number}" == code:
                     continue
-                add(code, "", department, number, relationship, "catalog")
+                add(code, "", department, number, relationship, "catalog", f"{code}-g{group}", operator)
                 if department == "MATH":
                     mentioned_math.add(number)
             if mentioned_math & {"1011", "1012", "1201", "1206"}:
