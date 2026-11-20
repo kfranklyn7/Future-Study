@@ -35,8 +35,8 @@ export function CourseNode({ data }: NodeProps<CourseFlowNode>) {
       ].join(' ')}
       style={{
         width: NODE_WIDTH,
-        background: done ? '#d9f2dc' : style.bg,
-        borderColor: done ? '#2f8f46' : status === 'progress' ? '#d97706' : style.border,
+        background: done ? 'var(--color-done)' : style.bg,
+        borderColor: done ? 'var(--color-done-line)' : status === 'progress' ? '#d97706' : style.border,
         borderStyle: status === 'locked' ? 'dashed' : 'solid',
       }}
     >
@@ -47,19 +47,19 @@ export function CourseNode({ data }: NodeProps<CourseFlowNode>) {
 
       <div
         className={[
-          'text-[15px] leading-tight font-bold tracking-wide text-[#1c1917] uppercase',
+          'text-[15px] leading-tight font-bold tracking-wide text-stone-900 uppercase',
           done ? 'line-through decoration-2 decoration-green-700/70' : '',
         ].join(' ')}
       >
         {def.label}
       </div>
       {def.codes.length > 0 && (
-        <div className="mt-1 text-[13px] font-semibold text-[#44403c]">
+        <div className="mt-1 text-[13px] font-semibold text-stone-700">
           {def.codes.join(' or ')}
         </div>
       )}
       {def.track === 'elective' && (
-        <div className="mt-1 text-[13px] font-semibold text-[#44403c]">
+        <div className="mt-1 text-[13px] font-semibold text-stone-700">
           CISC 3000 to 4899 · {electivesPicked ?? 0}/3 picked
         </div>
       )}

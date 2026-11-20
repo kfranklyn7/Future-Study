@@ -416,7 +416,7 @@ function Legend() {
           </li>
         ))}
         <li className="flex items-center gap-2">
-          <span className="inline-block h-3.5 w-5 rounded-sm border-2 border-green-700 bg-[#d9f2dc]" />
+          <span className="inline-block h-3.5 w-5 rounded-sm border-2 border-done-line bg-done" />
           Done
         </li>
         <li className="flex items-center gap-2">

@@ -310,10 +310,11 @@ export const mapEdges = mapNodes.flatMap((n) => [
   ...(n.softRequires ?? []).map((src) => ({ source: src, target: n.id, dashed: true })),
 ])
 
+// Colors are CSS variables from styles.css, so they switch with dark mode.
 export const trackStyle: Record<Track, { label: string; bg: string; border: string }> = {
-  math: { label: 'Math', bg: '#f6dcb4', border: '#b7814a' },
-  core: { label: 'CIS core', bg: '#e8c3bf', border: '#9c5a54' },
-  programming: { label: 'Programming sequence', bg: '#cfe5ee', border: '#4f8aa3' },
-  english: { label: 'English', bg: '#fff27a', border: '#b8a600' },
-  elective: { label: 'Electives', bg: '#e8c3bf', border: '#9c5a54' },
+  math: { label: 'Math', bg: 'var(--color-track-math)', border: 'var(--color-track-math-line)' },
+  core: { label: 'CIS core', bg: 'var(--color-track-core)', border: 'var(--color-track-core-line)' },
+  programming: { label: 'Programming sequence', bg: 'var(--color-track-programming)', border: 'var(--color-track-programming-line)' },
+  english: { label: 'English', bg: 'var(--color-track-english)', border: 'var(--color-track-english-line)' },
+  elective: { label: 'Electives', bg: 'var(--color-track-core)', border: 'var(--color-track-core-line)' },
 }

@@ -19,10 +19,10 @@ const W = 190, H = 54
 // Node colors by kind. Inline styles, because React Flow's CSS layer outranks Tailwind's.
 type Kind = 'ugrad' | 'grad' | 'prereq' | 'external'
 const KIND: Record<Kind, { label: string; background: string; borderColor: string; color: string; borderStyle?: string }> = {
-  ugrad: { label: 'Undergraduate', background: '#fbeef2', borderColor: '#d98aa3', color: '#1c1917' },
-  grad: { label: 'Graduate', background: '#e9f0fd', borderColor: '#7da2e8', color: '#1c1917' },
-  prereq: { label: 'Prerequisite from outside the program', background: '#f5f5f4', borderColor: '#a8a29e', color: '#1c1917' },
-  external: { label: 'Outside CISC', background: '#fff', borderColor: '#a8a29e', color: '#78716c', borderStyle: 'dashed' },
+  ugrad: { label: 'Undergraduate', background: 'var(--color-graph-ugrad)', borderColor: 'var(--color-graph-ugrad-line)', color: 'var(--color-stone-900)' },
+  grad: { label: 'Graduate', background: 'var(--color-graph-grad)', borderColor: 'var(--color-graph-grad-line)', color: 'var(--color-stone-900)' },
+  prereq: { label: 'Prerequisite from outside the program', background: 'var(--color-graph-prereq)', borderColor: 'var(--color-graph-muted-line)', color: 'var(--color-stone-900)' },
+  external: { label: 'Outside CISC', background: 'var(--color-graph-external)', borderColor: 'var(--color-graph-muted-line)', color: 'var(--color-stone-500)', borderStyle: 'dashed' },
 }
 
 // Lay the prerequisite DAG out left-to-right with dagre.

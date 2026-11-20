@@ -25,6 +25,27 @@
   --color-ink-muted: #6f5f52;
   --color-rose: #9a3b52; /* wordmark rosewood */
 
+  /* Course box fills and borders (course map, its legend and drawer). */
+  --color-track-math: #f6dcb4;
+  --color-track-math-line: #b7814a;
+  --color-track-core: #e8c3bf;
+  --color-track-core-line: #9c5a54;
+  --color-track-programming: #cfe5ee;
+  --color-track-programming-line: #4f8aa3;
+  --color-track-english: #fff27a;
+  --color-track-english-line: #b8a600;
+  --color-done: #d9f2dc;
+  --color-done-line: #2f8f46;
+
+  /* Prerequisite graph boxes. */
+  --color-graph-ugrad: #fbeef2;
+  --color-graph-ugrad-line: #d98aa3;
+  --color-graph-grad: #e9f0fd;
+  --color-graph-grad-line: #7da2e8;
+  --color-graph-prereq: #f5f5f4;
+  --color-graph-external: #ffffff;
+  --color-graph-muted-line: #a8a29e;
+
   /* Wordmark: Fraunces (loaded in index.html) with its soft, rounded setting. */
   --font-display: 'Fraunces', Georgia, serif;
 
@@ -60,6 +81,26 @@
     --color-ink: #f1e6da;
     --color-ink-muted: #b5a698;
     --color-rose: #e48aa0;
+
+    /* Course boxes: deep tints of each track color with light text. */
+    --color-track-math: #4a3a24;
+    --color-track-math-line: #c4945a;
+    --color-track-core: #4a2e2c;
+    --color-track-core-line: #b8766f;
+    --color-track-programming: #213c47;
+    --color-track-programming-line: #5f9fb8;
+    --color-track-english: #47411a;
+    --color-track-english-line: #c9b52e;
+    --color-done: #1e3b27;
+    --color-done-line: #4fb46c;
+
+    --color-graph-ugrad: #43262f;
+    --color-graph-ugrad-line: #c06d88;
+    --color-graph-grad: #22304a;
+    --color-graph-grad-line: #6f93d6;
+    --color-graph-prereq: #2a2622;
+    --color-graph-external: #221e1b;
+    --color-graph-muted-line: #6e655c;
 
     --color-stone-50: #1a1715;
     --color-stone-100: #26221e;
