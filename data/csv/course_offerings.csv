@@ -1,146 +1,146 @@
 course_code,title,academic_year,academic_year_start,term,time_codes,cross_listed,partner_department,offering_pattern,in_recent_window,level,source_url,scraped_at
-CISC 1215,Introduction to Programming Using Python,2025-2026,2025,Fall,W,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1600,Introduction to Multimedia Computing,2025-2026,2025,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2210,Introduction to Discrete Structures,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2820W,Computers and Ethics,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3115,Introduction to Modern Programming Techniques,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3130,Data Structures,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3140,Design and Implementation of Large-Scale Web Applications,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3142,Programming Paradigms in C++,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3160,Programming Languages,2025-2026,2025,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3220,Analysis of Algorithms,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3230,Theoretical Computer Science,2025-2026,2025,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3310,Principles of Computer Architecture,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3320,Operating Systems,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3325,Information Security,2025-2026,2025,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3340,Computer Networks and Protocols,2025-2026,2025,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3415,Principles of Robotics,2025-2026,2025,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3440,Machine Learning,2025-2026,2025,Fall,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3630,Multimedia Computing,2025-2026,2025,Fall,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3660,Game Programming,2025-2026,2025,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3810,Database Systems,2025-2026,2025,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 4610,Multimedia Databases,2025-2026,2025,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1600,Introduction to Multimedia Computing,2025-2026,2025,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2210,Introduction to Discrete Structures,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2820W,Computers and Ethics,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3115,Introduction to Modern Programming Techniques,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3130,Data Structures,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3140,Design and Implementation of Large-Scale Web Applications,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3142,Programming Paradigms in C++,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3160,Programming Languages,2025-2026,2025,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3171,Introduction to Software Engineering,2025-2026,2025,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3220,Analysis of Algorithms,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3225,Data Tools and Algorithms,2025-2026,2025,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3310,Principles of Computer Architecture,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3320,Operating Systems,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3350,Workstation Programming,2025-2026,2025,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3410,Artificial Intelligence,2025-2026,2025,Spring,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3610,Introduction to Multimedia Programming,2025-2026,2025,Spring,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3620,Computer Graphics,2025-2026,2025,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3650,Human-Computer Interaction,2025-2026,2025,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3810,Database Systems,2025-2026,2025,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 4331,System and Network Administration,2025-2026,2025,Spring,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1215,Introduction to Programming Using Python,2026-2027,2026,Fall,W,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1600,Introduction to Multimedia Computing,2026-2027,2026,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2210,Introduction to Discrete Structures,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2820W,Computers and Ethics,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3115,Introduction to Modern Programming Techniques,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3130,Data Structures,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3140,Design and Implementation of Large-Scale Web Applications,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3142,Programming Paradigms in C++,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3160,Programming Languages,2026-2027,2026,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3220,Analysis of Algorithms,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3230,Theoretical Computer Science,2026-2027,2026,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3310,Principles of Computer Architecture,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3320,Operating Systems,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3325,Information Security,2026-2027,2026,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3340,Computer Networks and Protocols,2026-2027,2026,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3415,Principles of Robotics,2026-2027,2026,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3440,Machine Learning,2026-2027,2026,Fall,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3630,Multimedia Computing,2026-2027,2026,Fall,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3660,Game Programming,2026-2027,2026,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3810,Database Systems,2026-2027,2026,Fall,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 4610,Multimedia Databases,2026-2027,2026,Fall,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1600,Introduction to Multimedia Computing,2026-2027,2026,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2210,Introduction to Discrete Structures,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2820W,Computers and Ethics,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3115,Introduction to Modern Programming Techniques,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3130,Data Structures,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3140,Design and Implementation of Large-Scale Web Applications,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3142,Programming Paradigms in C++,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3160,Programming Languages,2026-2027,2026,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3171,Introduction to Software Engineering,2026-2027,2026,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3220,Analysis of Algorithms,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3225,Data Tools and Algorithms,2026-2027,2026,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3310,Principles of Computer Architecture,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3320,Operating Systems,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3350,Workstation Programming,2026-2027,2026,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3410,Artificial Intelligence,2026-2027,2026,Spring,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3610,Introduction to Multimedia Programming,2026-2027,2026,Spring,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3620,Computer Graphics,2026-2027,2026,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3650,Human-Computer Interaction,2026-2027,2026,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3667,Game Design and Development,2026-2027,2026,Spring,D,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 3810,Database Systems,2026-2027,2026,Spring,"D,E",,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 4331,System and Network Administration,2026-2027,2026,Spring,E,,,scheduled,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1001,Computing and Quantitative Reasoning,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1003,Exploring Robotics,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1050,Introduction to Computer Applications,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1115,Introduction to Programming Using Java,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 4900,Independent and Group Projects I,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 4905,Independent and Group Projects II,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 5001,Independent Study and Research I,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 5002,Independent Study and Research II,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 5003,Independent Study and Research III,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 5004,Independent Study and Research IV,,,Every Semester,,,,every_semester,True,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1530,Electronic Commerce,,,As Scheduled,,BUSN 3120,Business,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1580W,Seminar in Computer-Assisted Management Games,,,As Scheduled,,BUSN 4202W,Business,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1590,Management Information Systems,,,As Scheduled,,BUSN 3420,Business,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1595,Management of New and Emerging Technologies,,,As Scheduled,,BUSN 3440,Business,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1597,New Media and Business,,,As Scheduled,,BUSN 3110; TVRA 3537,Business,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2531,Operations Management,,,As Scheduled,,BUSN 3430,Business,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2590,Foundations of Business Analytics,,,As Scheduled,,BUSN 3421,Business,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 2830,Introduction to Natural Language Processing,,,As Scheduled,,LING 3023; ENGL 3525,English,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1410,Philosophy and Artificial Intelligence,,,As Scheduled,,PHIL 3423,Philosophy,as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 1597,New Media and Business,,,As Scheduled,,BUSN 3110; TVRA 3537,"Television, Radio & Emerging Media",as_scheduled,False,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7200X,Analysis of Algorithms,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7221X,Theoretical Computer Science,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7228X,Quantum Computing,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7310X,Operating Systems I,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7412X,Artificial Intelligence II,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7422X,Game Theory,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7442X,Computer Vision,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7450X,Computer Applications in Health Sciences,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7510X,Database Systems,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7520X,Requirements Modeling for Info. Systems,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7530X,IT Project Management,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7534X,Information Systems Planning and Policy,2026-2027,2026,Fall,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7221X,Theoretical Computer Science,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7230X,Crypto Systems,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7410X,Artificial Intelligence,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7440X,Pattern Recognition and Neural Networks,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7512X,Advanced Database Systems,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7450X,Computer Applications in Health Sciences,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7500X,Introduction to Management Info. Systems,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7532X,Information Systems Management,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7540X,Software Methodology,2026-2027,2026,Spring,,,,scheduled,True,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7120X,Programming Languages and Compilers,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7200X,Analysis of Algorithms,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7224X,Formal Languages and Automata Theory,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7228X,Quantum Computing,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7302X,Computer Architecture,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7412X,Artificial Intelligence II,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7510X,Database Systems,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7520X,Requirements Modeling for Info. Systems,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7530X,IT Project Management,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7534X,Information Systems Planning and Policy,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7700X,Introduction to Data Science,2027-2028,2027,Fall,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7221X,Theoretical Computer Science,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7410X,Artificial Intelligence,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7440X,Pattern Recognition and Neural Networks,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7442X,Computer Vision,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7450X,Computer Applications in Health Sciences,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7500X,Introduction to Management Info Systems,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7512X,Advanced Database Systems,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7530X,IT Project Management,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7532X,Information Systems Management,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
-CISC 7540X,Software Methodology,2027-2028,2027,Spring,,,,scheduled,False,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1215,Introduction to Programming Using Python,2025-2026,2025,Fall,W,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1600,Introduction to Multimedia Computing,2025-2026,2025,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2210,Introduction to Discrete Structures,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2820W,Computers and Ethics,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3115,Introduction to Modern Programming Techniques,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3130,Data Structures,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3140,Design and Implementation of Large-Scale Web Applications,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3142,Programming Paradigms in C++,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3160,Programming Languages,2025-2026,2025,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3220,Analysis of Algorithms,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3230,Theoretical Computer Science,2025-2026,2025,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3310,Principles of Computer Architecture,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3320,Operating Systems,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3325,Information Security,2025-2026,2025,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3340,Computer Networks and Protocols,2025-2026,2025,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3415,Principles of Robotics,2025-2026,2025,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3440,Machine Learning,2025-2026,2025,Fall,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3630,Multimedia Computing,2025-2026,2025,Fall,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3660,Game Programming,2025-2026,2025,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3810,Database Systems,2025-2026,2025,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 4610,Multimedia Databases,2025-2026,2025,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1600,Introduction to Multimedia Computing,2025-2026,2025,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2210,Introduction to Discrete Structures,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2820W,Computers and Ethics,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3115,Introduction to Modern Programming Techniques,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3130,Data Structures,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3140,Design and Implementation of Large-Scale Web Applications,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3142,Programming Paradigms in C++,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3160,Programming Languages,2025-2026,2025,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3171,Introduction to Software Engineering,2025-2026,2025,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3220,Analysis of Algorithms,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3225,Data Tools and Algorithms,2025-2026,2025,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3310,Principles of Computer Architecture,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3320,Operating Systems,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3350,Workstation Programming,2025-2026,2025,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3410,Artificial Intelligence,2025-2026,2025,Spring,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3610,Introduction to Multimedia Programming,2025-2026,2025,Spring,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3620,Computer Graphics,2025-2026,2025,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3650,Human-Computer Interaction,2025-2026,2025,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3810,Database Systems,2025-2026,2025,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 4331,System and Network Administration,2025-2026,2025,Spring,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1215,Introduction to Programming Using Python,2026-2027,2026,Fall,W,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1600,Introduction to Multimedia Computing,2026-2027,2026,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2210,Introduction to Discrete Structures,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2820W,Computers and Ethics,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3115,Introduction to Modern Programming Techniques,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3130,Data Structures,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3140,Design and Implementation of Large-Scale Web Applications,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3142,Programming Paradigms in C++,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3160,Programming Languages,2026-2027,2026,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3220,Analysis of Algorithms,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3230,Theoretical Computer Science,2026-2027,2026,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3310,Principles of Computer Architecture,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3320,Operating Systems,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3325,Information Security,2026-2027,2026,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3340,Computer Networks and Protocols,2026-2027,2026,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3415,Principles of Robotics,2026-2027,2026,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3440,Machine Learning,2026-2027,2026,Fall,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3630,Multimedia Computing,2026-2027,2026,Fall,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3660,Game Programming,2026-2027,2026,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3810,Database Systems,2026-2027,2026,Fall,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 4610,Multimedia Databases,2026-2027,2026,Fall,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1600,Introduction to Multimedia Computing,2026-2027,2026,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2210,Introduction to Discrete Structures,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2820W,Computers and Ethics,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3115,Introduction to Modern Programming Techniques,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3130,Data Structures,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3140,Design and Implementation of Large-Scale Web Applications,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3142,Programming Paradigms in C++,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3160,Programming Languages,2026-2027,2026,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3171,Introduction to Software Engineering,2026-2027,2026,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3220,Analysis of Algorithms,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3225,Data Tools and Algorithms,2026-2027,2026,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3310,Principles of Computer Architecture,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3320,Operating Systems,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3350,Workstation Programming,2026-2027,2026,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3410,Artificial Intelligence,2026-2027,2026,Spring,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3610,Introduction to Multimedia Programming,2026-2027,2026,Spring,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3620,Computer Graphics,2026-2027,2026,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3650,Human-Computer Interaction,2026-2027,2026,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3667,Game Design and Development,2026-2027,2026,Spring,D,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 3810,Database Systems,2026-2027,2026,Spring,"D,E",,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 4331,System and Network Administration,2026-2027,2026,Spring,E,,,scheduled,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1001,Computing and Quantitative Reasoning,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1003,Exploring Robotics,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1050,Introduction to Computer Applications,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1115,Introduction to Programming Using Java,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 4900,Independent and Group Projects I,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 4905,Independent and Group Projects II,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 5001,Independent Study and Research I,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 5002,Independent Study and Research II,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 5003,Independent Study and Research III,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 5004,Independent Study and Research IV,,,Every Semester,,,,every_semester,TRUE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1530,Electronic Commerce,,,As Scheduled,,BUSN 3120,Business,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1580W,Seminar in Computer-Assisted Management Games,,,As Scheduled,,BUSN 4202W,Business,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1590,Management Information Systems,,,As Scheduled,,BUSN 3420,Business,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1595,Management of New and Emerging Technologies,,,As Scheduled,,BUSN 3440,Business,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1597,New Media and Business,,,As Scheduled,,BUSN 3110; TVRA 3537,Business,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2531,Operations Management,,,As Scheduled,,BUSN 3430,Business,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2590,Foundations of Business Analytics,,,As Scheduled,,BUSN 3421,Business,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 2830,Introduction to Natural Language Processing,,,As Scheduled,,LING 3023; ENGL 3525,English,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1410,Philosophy and Artificial Intelligence,,,As Scheduled,,PHIL 3423,Philosophy,as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 1597,New Media and Business,,,As Scheduled,,BUSN 3110; TVRA 3537,"Television, Radio & Emerging Media",as_scheduled,FALSE,Undergraduate,https://www.brooklyn.edu/cis/undergraduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7200X,Analysis of Algorithms,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7221X,Theoretical Computer Science,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7228X,Quantum Computing,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7310X,Operating Systems I,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7412X,Artificial Intelligence II,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7422X,Game Theory,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7442X,Computer Vision,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7450X,Computer Applications in Health Sciences,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7510X,Database Systems,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7520X,Requirements Modeling for Info. Systems,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7530X,IT Project Management,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7534X,Information Systems Planning and Policy,2026-2027,2026,Fall,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7221X,Theoretical Computer Science,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7230X,Crypto Systems,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7410X,Artificial Intelligence,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7440X,Pattern Recognition and Neural Networks,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7512X,Advanced Database Systems,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7450X,Computer Applications in Health Sciences,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7500X,Introduction to Management Info. Systems,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7532X,Information Systems Management,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7540X,Software Methodology,2026-2027,2026,Spring,,,,scheduled,TRUE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7120X,Programming Languages and Compilers,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7200X,Analysis of Algorithms,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7224X,Formal Languages and Automata Theory,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7228X,Quantum Computing,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7302X,Computer Architecture,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7412X,Artificial Intelligence II,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7510X,Database Systems,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7520X,Requirements Modeling for Info. Systems,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7530X,IT Project Management,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7534X,Information Systems Planning and Policy,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7700X,Introduction to Data Science,2027-2028,2027,Fall,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7221X,Theoretical Computer Science,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7410X,Artificial Intelligence,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7440X,Pattern Recognition and Neural Networks,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7442X,Computer Vision,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7450X,Computer Applications in Health Sciences,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7500X,Introduction to Management Info Systems,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7512X,Advanced Database Systems,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7530X,IT Project Management,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7532X,Information Systems Management,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00
+CISC 7540X,Software Methodology,2027-2028,2027,Spring,,,,scheduled,FALSE,Graduate,https://www.brooklyn.edu/cis/graduate-computer-science/,2026-11-20T16:41:34+00:00

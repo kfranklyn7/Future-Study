@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv('data\course_prereqs.csv')
+df = pd.read_csv('data\csv\courses.csv')
 print(df.head())
 print(df.info())
 print(df.describe())

@@ -1,0 +1,75 @@
+# Future-Study
+
+Hackathon project: map Brooklyn College Computer and Information Science (CISC) courses
+to career paths and free learning resources. We're going for the MLH "Best Use of
+Snowflake" prize, so core features should run on Snowflake (tables + Cortex AI).
+
+## Current state
+
+The project is at the data stage. There is no app yet.
+
+- `scrape_brooklyn_cis.py`: the main scraper. Pulls CIS programs, the course inventory,
+  undergraduate and graduate bulletin PDFs, department schedules, syllabi, related PDFs and
+  degree maps from brooklyn.edu, then writes one CSV per table to `data/csv/`.
+- `data/csv/`: scraped output, ready to load into Snowflake. `manifest.csv` lists every
+  table with row counts and a description.
+- `data.py`: quick pandas exploration of `data/csv/courses.csv`.
+- `future_study.ipynb`: empty notebook.
+- `ideas.md`: feature ideas (career paths, degree-map graph, interest-based search,
+  professor ratings).
+
+## Running the scraper
+
+```powershell
+pip install -r requirements.txt
+python scrape_brooklyn_cis.py                      # defaults: --years 5 --output data/csv
+python scrape_brooklyn_cis.py --years 5 --output data/csv --cache data/cache/pdfs
+```
+
+- "Recently offered" means listed as active in a bulletin, or on the department schedule,
+  within the last `--years` academic years (fall through spring). In Nov 2026 the default
+  window is 2022-2023 through 2026-2027.
+- PDFs are cached in `data/cache/pdfs`. Don't commit the cache.
+- Be polite to brooklyn.edu: keep the request pause in place and reuse the cache.
+
+## Data model (`data/csv/`)
+
+Course codes are written `CISC 3130` (dept, space, number; numbers can carry a suffix
+such as `2820W` or `7100X`).
+
+| Table | What it holds |
+|---|---|
+| `programs.csv` | CIS undergrad, grad and minor programs (`program_id` is the key) |
+| `program_sections.csv` | Overview and requirement text per program |
+| `program_courses.csv` | CISC courses mentioned in each program's requirements |
+| `courses.csv` | Every CISC course found (`course_code` is the key) |
+| `courses_offered_recent.csv` | Subset of `courses.csv` offered in the recent window |
+| `course_requisites.csv` | Prerequisite and corequisite edges; use for the prerequisite graph. Records every course mentioned, not the and/or logic, so show the raw `prerequisites` text when the exact rule matters |
+| `bulletins.csv` / `bulletin_courses.csv` | Bulletin PDFs parsed, and course entries in each |
+| `course_offerings.csv` | Department schedule rows by term |
+| `syllabi.csv` | Full syllabus text per course (good input for Cortex) |
+| `related_documents.csv` | Other linked PDFs (prereq diagrams, checklists) |
+| `degree_map_courses.csv` | Four-year degree maps by program and bulletin year |
+
+CSVs are written without a pandas index column, so they load into Snowflake directly.
+
+## Snowflake
+
+- The team's data lives in a shared Snowflake account owned by Kevon. Teammates are invited
+  as users.
+- Objects created while using ACCOUNTADMIN are invisible to SYSADMIN. If a teammate can't
+  see a database, check its owner with `SHOW DATABASES;` and grant access, or create
+  objects as SYSADMIN in the first place.
+- Set a default warehouse before running queries.
+- For LLM features, use Cortex `AI_COMPLETE`. Check which models the account has with
+  `SHOW CORTEX BASE MODELS;` (Claude Opus 5.5 is `claude-opus-5-5`, in preview and not in
+  every region).
+- Never commit credentials. There is no `.gitignore`, so keep any `.env` or connection
+  file out of commits by hand.
+
+## Conventions
+
+- Python 3, pandas, requests, BeautifulSoup, pypdf (`requirements.txt`).
+- Use forward slashes or `pathlib` for paths so scripts work on Windows and macOS.
+- Git remote is HTTPS: https://github.com/kfranklyn7/Future-Study (branch `main`).
+- Write descriptive commit messages.

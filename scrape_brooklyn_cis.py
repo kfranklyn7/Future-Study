@@ -26,6 +26,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import logging
@@ -1359,6 +1360,64 @@ def build_courses(
     return frame.sort_values(["division", "course_number"]).reset_index(drop=True)
 
 
+_SNOWFLAKE_CHARS = {
+    "\u00a0": " ",
+    "\u2018": "'",
+    "\u2019": "'",
+    "\u201c": '"',
+    "\u201d": '"',
+    "\u2013": "-",
+    "\u2014": "-",
+    "\u00bd": " 1/2",
+    "\u00ad": "",
+}
+
+
+def snowflake_cell(value) -> str:
+    """One CSV field, safe for Snowflake's delimited-file loader.
+
+    Embedded newlines make the loader treat one record as many and then
+    ignore the header, so every value is a single line. Booleans are TRUE
+    or FALSE, which Snowflake accepts without a file-format override.
+    """
+    if value is None:
+        return ""
+    try:
+        if pd.isna(value):
+            return ""
+    except (TypeError, ValueError):
+        pass
+    if isinstance(value, bool):
+        return "TRUE" if value else "FALSE"
+    text = str(value).replace("\x00", "")
+    for source, replacement in _SNOWFLAKE_CHARS.items():
+        text = text.replace(source, replacement)
+    text = text.replace("\r\n", " ").replace("\r", " ").replace("\n", " ")
+    text = re.sub(r"[ \t]+", " ", text).strip()
+    if text in {"True", "False"}:
+        return text.upper()
+    if text.lower() in {"nan", "none", "<na>"}:
+        return ""
+    return text
+
+
+def write_snowflake_csv(frame: pd.DataFrame, path: Path) -> None:
+    """Write a header row and data rows, with no dataframe index column."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    columns = [snowflake_cell(column) for column in frame.columns]
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.writer(
+            handle,
+            lineterminator="\n",
+            quoting=csv.QUOTE_MINIMAL,
+            quotechar='"',
+            doublequote=True,
+        )
+        writer.writerow(columns)
+        for record in frame.itertuples(index=False, name=None):
+            writer.writerow([snowflake_cell(value) for value in record])
+
+
 def stamp(frame: pd.DataFrame, scraped_at: str) -> pd.DataFrame:
     if frame.empty:
         frame = frame.copy()
@@ -1372,8 +1431,7 @@ def stamp(frame: pd.DataFrame, scraped_at: str) -> pd.DataFrame:
 
 def write_table(frame: pd.DataFrame, path: Path, description: str, scraped_at: str) -> dict:
     stamped = stamp(frame, scraped_at)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    stamped.to_csv(path, index=False, encoding="utf-8")
+    write_snowflake_csv(stamped, path)
     LOG.info("Wrote %s (%s rows)", path.name, len(stamped))
     return {
         "file_name": path.name,
