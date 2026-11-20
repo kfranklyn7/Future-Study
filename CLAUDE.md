@@ -11,6 +11,9 @@ place. See README.md for setup and the API. App data lives in `CISC.CORE` (the o
 `CISC.PUBLIC` tables, some with quoted names like `"Course Requisites"`, are not used).
 AI output (`COURSE_AI`, `PROGRAM_AI`, `COURSE_CAREERS`, `CAREER_CANON`, `RESOURCES`) is
 precomputed by `snowflake/ai_enrichment.sql`; only `/api/recommend` calls Cortex live.
+`snowflake/curated_resources.sql` adds hand-picked links (Paul's Math Notes, Professor Leonard,
+The Organic Chemistry Tutor, W3Schools, GeeksforGeeks) to `RESOURCES`; rerun it after
+`ai_enrichment.sql`, which rebuilds that table.
 
 - `scrape_brooklyn_cis.py`: the main scraper. Pulls CIS programs, the course inventory,
   undergraduate and graduate bulletin PDFs, department schedules, syllabi, related PDFs and

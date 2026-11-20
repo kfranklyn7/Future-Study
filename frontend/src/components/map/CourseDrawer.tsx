@@ -1,23 +1,19 @@
 import { useState, type ReactNode } from 'react'
-import {
-  core,
-  electives,
-  ELECTIVES_NEEDED,
-  mapNodeById,
-  trackStyle,
-  type CourseInfo,
-  type MapNodeDef,
-  type Resource,
-} from '#/data/csMap'
+import { trackStyle, type CourseInfo, type MapNodeDef, type Resource } from '#/data/csMap'
+import { courseInfo } from '#/data/programMaps'
 import type { NodeStatus } from './CourseNode'
 
 type Props = {
   def: MapNodeDef
   status: NodeStatus
   pickedElectives: string[]
+  /** The other boxes in this box's "take one of these" group. */
+  alternatives: MapNodeDef[]
   onSetStatus: (status: 'done' | 'progress' | null) => void
   onToggleElective: (code: string) => void
   onSelect: (id: string) => void
+  /** Label of any box on the map, including chosen-elective boxes. */
+  nodeLabel: (id: string) => string
   onClose: () => void
 }
 
@@ -32,15 +28,17 @@ export function CourseDrawer({
   def,
   status,
   pickedElectives,
+  alternatives,
   onSetStatus,
   onToggleElective,
   onSelect,
+  nodeLabel,
   onClose,
 }: Props) {
   const [tab, setTab] = useState(0)
-  const options = def.codes.map((c) => core[c]).filter((c): c is CourseInfo => !!c)
+  const options = def.codes.map(courseInfo).filter((c): c is CourseInfo => !!c)
   const course = options[Math.min(tab, options.length - 1)]
-  const isElective = def.track === 'elective'
+  const isElective = !!def.pick
   const prereqIds = [...def.requires, ...(def.softRequires ?? [])]
 
   return (
@@ -86,6 +84,17 @@ export function CourseDrawer({
           {status === 'locked' && (
             <span className="ml-auto self-center text-sm text-stone-500">Prerequisites not done yet</span>
           )}
+          {def.pickedFrom && (
+            <button
+              onClick={() => {
+                onToggleElective(def.codes[0])
+                onClose()
+              }}
+              className="ml-auto self-center text-sm text-stone-500 hover:text-accent"
+            >
+              Remove from my electives
+            </button>
+          )}
         </div>
       )}
 
@@ -121,6 +130,22 @@ export function CourseDrawer({
           )
         )}
 
+        {alternatives.length > 0 && (
+          <Section title="Or take instead">
+            <div className="flex flex-wrap gap-2">
+              {alternatives.map((a) => (
+                <button
+                  key={a.id}
+                  onClick={() => onSelect(a.id)}
+                  className="rounded-full border border-stone-300 px-3 py-1 text-sm text-stone-700 hover:border-accent/60 hover:text-accent"
+                >
+                  {a.label} · {a.codes.join(', ')}
+                </button>
+              ))}
+            </div>
+          </Section>
+        )}
+
         {prereqIds.length > 0 && (
           <Section title="Comes after">
             <div className="flex flex-wrap gap-2">
@@ -130,17 +155,18 @@ export function CourseDrawer({
                   onClick={() => onSelect(id)}
                   className="rounded-full border border-stone-300 px-3 py-1 text-base text-stone-700 hover:border-accent/60 hover:text-accent"
                 >
-                  {mapNodeById[id].label}
+                  {nodeLabel(id)}
                 </button>
               ))}
             </div>
           </Section>
         )}
 
-        {isElective && (
-          <Section title={`Pick ${ELECTIVES_NEEDED} (${pickedElectives.length} picked)`}>
+        {def.pick && (
+          <Section title={`Pick ${def.pick.count} (${pickedElectives.length} picked)`}>
+            <p className="mb-2 text-sm text-stone-600">Each course you pick gets its own box on the map. Mark those done as you finish them.</p>
             <ul className="divide-y divide-stone-100 rounded-md border border-stone-200">
-              {electives.map((e) => {
+              {def.pick.options.map((e) => {
                 const checked = pickedElectives.includes(e.code)
                 return (
                   <li key={e.code}>
@@ -164,7 +190,8 @@ export function CourseDrawer({
           </Section>
         )}
 
-        <Section title="Career paths">
+        {def.careers.length > 0 && (
+          <Section title="Career paths">
           <div className="flex flex-wrap gap-2">
             {def.careers.map((c) => (
               <span key={c} className="rounded-full bg-accent-soft px-3 py-1 text-base font-medium text-accent">
@@ -172,9 +199,11 @@ export function CourseDrawer({
               </span>
             ))}
           </div>
-        </Section>
+          </Section>
+        )}
 
-        <Section title="Free resources">
+        {def.resources.length > 0 && (
+          <Section title="Free resources">
           <ul className="space-y-2">
             {def.resources.map((r) => (
               <li key={r.url}>
@@ -193,7 +222,8 @@ export function CourseDrawer({
               </li>
             ))}
           </ul>
-        </Section>
+          </Section>
+        )}
       </div>
     </aside>
   )

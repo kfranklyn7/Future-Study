@@ -9,7 +9,8 @@ export type CourseSummary = {
 
 export type Career = { title: string; career: string; why: string; relevance: string; next_steps: string[] }
 export type Resource = { title: string; url: string; provider: string; type: string }
-export type CourseRef = { course_code: string; title: string | null; relationship?: string }
+/** has_page: the course has its own /courses/$code page (a CISC course, or a found non-CISC prerequisite). */
+export type CourseRef = { course_code: string; title: string | null; relationship?: string; has_page?: boolean }
 
 export type Course = CourseSummary & {
   hours: string
@@ -31,13 +32,13 @@ export type Program = ProgramSummary & {
   url: string
   overview: string
   careers: { title: string; why: string; typical_courses: string[]; next_steps: string[] }[] | null
-  courses: { course_code: string; title: string | null; division: string | null }[]
+  courses: { course_code: string; title: string | null; division: string | null; has_page?: boolean }[]
   resources: Resource[]
   sections: { section_title: string; section_text: string }[]
 }
 
 export type GraphData = {
-  nodes: { id: string; title: string | null; division: string | null; in_scope: boolean; in_catalog: boolean }[]
+  nodes: { id: string; title: string | null; division: string | null; in_scope: boolean; in_catalog: boolean; has_page: boolean }[]
   edges: { source: string; target: string; relationship: string }[]
 }
 

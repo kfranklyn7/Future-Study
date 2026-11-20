@@ -31,6 +31,8 @@ the one-liner at the top of that file.
    python scrape_prereq_courses.py                           # non-CISC prerequisites (MATH, BUSN, ...)
    python snowflake/load_csvs.py
    python snowflake/run_sql.py snowflake/ai_enrichment.sql   # ~2 min of Cortex calls
+   python snowflake/run_sql.py snowflake/curated_resources.sql  # hand-picked links (Paul's Notes, W3Schools, ...)
+   python snowflake/run_sql.py snowflake/course_names.sql    # names for prerequisite courses with no page (CORC, ...)
    python snowflake/check_urls.py                            # needs normal internet access
    ```
 2. App:

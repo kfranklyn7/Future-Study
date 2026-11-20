@@ -10,6 +10,8 @@ export type CourseNodeData = {
   dimmed: boolean
   highlighted: boolean
   electivesPicked?: number
+  /** Codes of the other boxes in this box's "take one of these" group. */
+  alternatives?: string[]
 }
 
 export type CourseFlowNode = Node<CourseNodeData, 'course'>
@@ -19,7 +21,7 @@ export const NODE_WIDTH = 210
 const hidden = { opacity: 0, width: 1, height: 1, minWidth: 0, minHeight: 0, border: 'none' }
 
 export function CourseNode({ data }: NodeProps<CourseFlowNode>) {
-  const { def, status, selected, dimmed, highlighted, electivesPicked } = data
+  const { def, status, selected, dimmed, highlighted, electivesPicked, alternatives } = data
   const style = trackStyle[def.track]
   const done = status === 'done'
 
@@ -45,9 +47,12 @@ export function CourseNode({ data }: NodeProps<CourseFlowNode>) {
 
       <StatusBadge status={status} />
 
+      {/* Two lines at most, so every box has a known height and stacked boxes never overlap.
+          The drawer shows the full title. */}
       <div
+        title={def.label}
         className={[
-          'text-[15px] leading-tight font-bold tracking-wide text-stone-900 uppercase',
+          'line-clamp-2 text-[15px] leading-tight font-bold tracking-wide text-stone-900 uppercase',
           done ? 'line-through decoration-2 decoration-green-700/70' : '',
         ].join(' ')}
       >
@@ -58,9 +63,15 @@ export function CourseNode({ data }: NodeProps<CourseFlowNode>) {
           {def.codes.join(' or ')}
         </div>
       )}
-      {def.track === 'elective' && (
+      {!!alternatives?.length && (
+        <div className="mt-0.5 truncate text-[11px] font-medium tracking-wide text-stone-500 uppercase">
+          or {alternatives.join(', ')}
+        </div>
+      )}
+      {def.pick && (
         <div className="mt-1 text-[13px] font-semibold text-stone-700">
-          CISC 3000 to 4899 · {electivesPicked ?? 0}/3 picked
+          {def.pick.label ? `${def.pick.label} · ` : ''}
+          {electivesPicked ?? 0}/{def.pick.count} done
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -15,7 +15,8 @@ import {
 } from '@xyflow/react'
 import '@xyflow/react/style.css'
 
-import { ELECTIVES_NEEDED, mapEdges, mapNodeById, mapNodes, trackStyle, type Track } from '#/data/csMap'
+import { legacyIds, trackStyle, type MapNodeDef, type Track } from '#/data/csMap'
+import { alternativesOf, courseInfo, slotOf, withChosen, type ProgramMap } from '#/data/programMaps'
 import { CourseNode, NODE_WIDTH, type CourseFlowNode, type NodeStatus } from '#/components/map/CourseNode'
 import { CourseDrawer } from '#/components/map/CourseDrawer'
 import { useTheme } from '#/theme'
@@ -27,51 +28,77 @@ const DRAWER_WIDTH = 460
 const MIN_ZOOM = 0.3
 const MAX_ZOOM = 1.8
 
-const STORAGE_KEY = 'future-study:map:v1'
-
 type Progress = {
   status: Record<string, 'done' | 'progress'>
+  /** Chosen courses in pick boxes, as "<pick box id>:<course code>". */
   electives: string[]
 }
 
 const emptyProgress: Progress = { status: {}, electives: [] }
 
-function loadProgress(): Progress {
+function loadProgress(map: ProgramMap): Progress {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
+    const raw = localStorage.getItem(map.storageKey)
     if (!raw) return emptyProgress
     const parsed = JSON.parse(raw) as Partial<Progress>
-    return { status: parsed.status ?? {}, electives: parsed.electives ?? [] }
+    const known = new Set(map.nodes.map((n) => n.id))
+    // Saved before "take one of these" boxes were split up: move to the first option.
+    const status = Object.fromEntries(
+      Object.entries(parsed.status ?? {})
+        .map(([id, s]) => [legacyIds[id] ?? id, s] as const)
+        // Chosen-elective boxes are "<pick box id>:<course code>".
+        .filter(([id]) => known.has(id.split(':')[0])),
+    )
+    // Older saves listed bare elective codes; they all belonged to the CS map's electives box.
+    const electives = (parsed.electives ?? []).map((e) => (e.includes(':') ? e : `electives:${e}`))
+    return { status, electives }
   } catch {
     return emptyProgress
   }
 }
 
-function saveProgress(p: Progress) {
+function saveProgress(map: ProgramMap, p: Progress) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(p))
+    localStorage.setItem(map.storageKey, JSON.stringify(p))
   } catch {
     // Storage blocked (private mode etc.): progress just won't persist.
   }
 }
 
-const parentsOf = (id: string) => {
-  const def = mapNodeById[id]
-  return [...def.requires, ...(def.softRequires ?? [])]
+type Graph = {
+  nodes: MapNodeDef[]
+  byId: Record<string, MapNodeDef>
+  edges: { source: string; target: string; dashed: boolean }[]
 }
-const childrenOf = (id: string) => mapEdges.filter((e) => e.source === id).map((e) => e.target)
 
-function ancestors(id: string, acc = new Set<string>()) {
-  for (const p of parentsOf(id)) {
+// The map's boxes plus one box per course chosen in a pick box (the electives).
+function buildGraph(map: ProgramMap, picked: string[]): Graph {
+  const nodes = withChosen(map, picked, NODE_WIDTH)
+  const edges = nodes.flatMap((n) => [
+    ...n.requires.map((src) => ({ source: src, target: n.id, dashed: false })),
+    ...(n.softRequires ?? []).map((src) => ({ source: src, target: n.id, dashed: true })),
+  ])
+  return { nodes, byId: Object.fromEntries(nodes.map((n) => [n.id, n])), edges }
+}
+
+const parentsOf = (g: Graph, id: string) => {
+  const def = g.byId[id]
+  return def ? [...def.requires, ...(def.softRequires ?? [])] : []
+}
+const childrenOf = (g: Graph, id: string) => g.edges.filter((e) => e.source === id).map((e) => e.target)
+
+function ancestors(g: Graph, id: string, acc = new Set<string>()) {
+  for (const p of parentsOf(g, id)) {
     if (!acc.has(p)) {
       acc.add(p)
-      ancestors(p, acc)
+      ancestors(g, p, acc)
     }
   }
   return acc
 }
 
-export function Roadmap() {
+/** One program's course map. Remount it (key by map id) when switching maps. */
+export function Roadmap({ map, picker }: { map: ProgramMap; picker?: ReactNode }) {
   const theme = useTheme()
   const dark = theme === 'dark'
   const [progress, setProgress] = useState<Progress>(emptyProgress)
@@ -98,6 +125,7 @@ export function Roadmap() {
   }
   useEffect(() => () => window.clearTimeout(hoverTimer.current), [])
   const [rf, setRf] = useState<ReactFlowInstance<CourseFlowNode, Edge> | null>(null)
+  const graph = useMemo(() => buildGraph(map, progress.electives), [map, progress.electives])
 
   // Fit the whole map once the layout has settled, and again when the window resizes. While the
   // course drawer is open, fit it into the space left of the drawer so the drawer covers nothing.
@@ -120,7 +148,7 @@ export function Roadmap() {
       // used here: React Flow drops its measured sizes when the nodes prop is rebuilt (which
       // happens on every selection), so it would count every box as 0 x 0.
       let x1 = Infinity, y1 = Infinity, x2 = -Infinity, y2 = -Infinity
-      for (const def of mapNodes) {
+      for (const def of graph.nodes) {
         const el = box.querySelector<HTMLElement>(`.react-flow__node[data-id="${def.id}"]`)
         x1 = Math.min(x1, def.x)
         y1 = Math.min(y1, def.y)
@@ -140,7 +168,7 @@ export function Roadmap() {
       cancelAnimationFrame(frame)
       window.removeEventListener('resize', onResize)
     }
-  }, [rf, drawerOpen])
+  }, [rf, drawerOpen, graph])
 
   // Picking another course while the drawer is open: if the user has zoomed in and the drawer
   // covers that box, slide the map left so the box stays visible.
@@ -149,7 +177,8 @@ export function Roadmap() {
     const prev = prevSelected.current
     prevSelected.current = selectedId
     if (!rf || !selectedId || !prev) return
-    const def = mapNodeById[selectedId]
+    const def = graph.byId[selectedId]
+    if (!def) return
     const right = rf.flowToScreenPosition({ x: def.x + NODE_WIDTH, y: def.y }).x
     const drawerLeft = window.innerWidth - Math.min(DRAWER_WIDTH, window.innerWidth)
     if (drawerLeft < 240 || right + 24 <= drawerLeft) return // phone: drawer is full width
@@ -157,15 +186,15 @@ export function Roadmap() {
     const visibleCenter = drawerLeft / 2
     const offset = (window.innerWidth / 2 - visibleCenter) / zoom
     rf.setCenter(def.x + NODE_WIDTH / 2 + offset, def.y + 30, { zoom, duration: 350 })
-  }, [rf, selectedId])
+  }, [rf, selectedId, graph])
 
   useEffect(() => {
-    setProgress(loadProgress())
+    setProgress(loadProgress(map))
     setLoaded(true)
-  }, [])
+  }, [map])
   useEffect(() => {
-    if (loaded) saveProgress(progress)
-  }, [progress, loaded])
+    if (loaded) saveProgress(map, progress)
+  }, [map, progress, loaded])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setSelectedId(null)
@@ -175,29 +204,36 @@ export function Roadmap() {
 
   const statusOf = useCallback(
     (id: string): NodeStatus => {
-      if (mapNodeById[id].track === 'elective') {
-        const n = progress.electives.length
-        if (n >= ELECTIVES_NEEDED) return 'done'
-        if (n > 0) return 'progress'
+      const def = graph.byId[id]
+      if (def?.pick) {
+        // A pick box is done once enough of its chosen courses are done.
+        const chosen = graph.nodes.filter((n) => n.pickedFrom === id)
+        const done = chosen.filter((n) => progress.status[n.id] === 'done').length
+        if (done >= def.pick.count) return 'done'
+        if (chosen.length > 0) return 'progress'
       } else {
         const s = progress.status[id]
         if (s) return s
       }
-      return parentsOf(id).every((p) => statusOf(p) === 'done') ? 'available' : 'locked'
+      // A prerequisite with alternatives ("CISC 1115 or 1170") is met when any of them is done.
+      const met = (p: string) =>
+        statusOf(p) === 'done' ||
+        (!!graph.byId[p] && alternativesOf(graph.nodes, graph.byId[p]).some((a) => statusOf(a.id) === 'done'))
+      return parentsOf(graph, id).every(met) ? 'available' : 'locked'
     },
-    [progress],
+    [progress, graph],
   )
 
   // Hovering or selecting a box lights up everything it depends on plus what it unlocks next.
   const focusId = hoverId ?? selectedId
   const focusSet = useMemo(() => {
     if (!focusId) return null
-    return new Set([focusId, ...ancestors(focusId), ...childrenOf(focusId)])
-  }, [focusId])
+    return new Set([focusId, ...ancestors(graph, focusId), ...childrenOf(graph, focusId)])
+  }, [focusId, graph])
 
   const nodes: CourseFlowNode[] = useMemo(
     () =>
-      mapNodes.map((def) => ({
+      graph.nodes.map((def) => ({
         id: def.id,
         type: 'course',
         position: { x: def.x, y: def.y },
@@ -207,21 +243,22 @@ export function Roadmap() {
           selected: def.id === selectedId,
           highlighted: !!focusSet?.has(def.id) && def.id !== focusId,
           dimmed: !!focusSet && !focusSet.has(def.id),
-          electivesPicked: progress.electives.length,
+          electivesPicked: graph.nodes.filter((n) => n.pickedFrom === def.id && progress.status[n.id] === 'done').length,
+          alternatives: alternativesOf(graph.nodes, def).flatMap((a) => a.codes),
         },
       })),
-    [statusOf, selectedId, focusSet, focusId, progress.electives.length],
+    [graph, statusOf, selectedId, focusSet, focusId, progress.status],
   )
 
   const edges: Edge[] = useMemo(
     () =>
-      mapEdges.map((e) => {
+      graph.edges.map((e) => {
         const lit =
           !!focusId &&
           !!focusSet &&
           focusSet.has(e.source) &&
           focusSet.has(e.target) &&
-          (e.target === focusId || e.source === focusId || ancestors(focusId).has(e.target))
+          (e.target === focusId || e.source === focusId || ancestors(graph, focusId).has(e.target))
         const done = statusOf(e.source) === 'done' && statusOf(e.target) === 'done'
         const color = lit ? (dark ? '#d0627f' : '#8a1538') : done ? '#2f8f46' : dark ? '#968b80' : '#44403c'
         return {
@@ -239,16 +276,49 @@ export function Roadmap() {
           },
         }
       }),
-    [focusId, focusSet, statusOf, dark],
+    [graph, focusId, focusSet, statusOf, dark],
   )
 
-  const doneCount = mapNodes.filter((n) => statusOf(n.id) === 'done').length
-  const nextUp = mapNodes.filter((n) => statusOf(n.id) === 'available')
-  const pct = Math.round((doneCount / mapNodes.length) * 100)
-  const takingCount = mapNodes.filter((n) => statusOf(n.id) === 'progress').length
+  // Progress counts requirements, not boxes: a "take one of these" group is one requirement,
+  // done when any of its boxes is done.
+  const slots = useMemo(() => [...new Set(map.nodes.map(slotOf))], [map])
+  const slotStatus = (slot: string): NodeStatus => {
+    const members = map.nodes.filter((n) => slotOf(n) === slot).map((n) => statusOf(n.id))
+    return members.includes('done') ? 'done' : members.includes('progress') ? 'progress' : members[0]
+  }
+  const doneCount = slots.filter((s) => slotStatus(s) === 'done').length
+  // Skip an alternative once another box in its group is done or being taken. Chosen
+  // electives count toward their pick box, so they aren't slots of their own.
+  const nextUp = graph.nodes.filter(
+    (n) =>
+      statusOf(n.id) === 'available' &&
+      !(n.pick && graph.nodes.some((c) => c.pickedFrom === n.id)) &&
+      alternativesOf(graph.nodes, n).every((a) => !progress.status[a.id]),
+  )
+  const pct = Math.round((doneCount / slots.length) * 100)
+  const takingCount = slots.filter((s) => slotStatus(s) === 'progress').length
   const hasProgress = Object.keys(progress.status).length > 0 || progress.electives.length > 0
 
-  const selected = selectedId ? mapNodeById[selectedId] : null
+  // Live credit totals from the boxes marked Done or Taking now. Pick boxes have no course of
+  // their own; their chosen-course boxes carry the credits. Courses with no credits listed in
+  // the catalog are counted separately rather than guessed.
+  const credits = useMemo(() => {
+    let earned = 0, taking = 0, unknown = 0
+    for (const n of graph.nodes) {
+      const s = progress.status[n.id]
+      if (!s || n.pick) continue
+      const value = n.codes.reduce<number | null>((sum, c) => {
+        const cr = courseInfo(c)?.credits
+        return sum === null || cr == null ? null : sum + cr
+      }, 0)
+      if (value === null) unknown++
+      else if (s === 'done') earned += value
+      else taking += value
+    }
+    return { earned, applied: earned + taking, unknown }
+  }, [graph, progress.status])
+
+  const selected = selectedId ? (graph.byId[selectedId] ?? null) : null
 
   const setStatus = (id: string, s: 'done' | 'progress' | null) =>
     setProgress((p) => {
@@ -258,11 +328,18 @@ export function Roadmap() {
       return { ...p, status }
     })
 
-  const toggleElective = (code: string) =>
-    setProgress((p) => ({
-      ...p,
-      electives: p.electives.includes(code) ? p.electives.filter((c) => c !== code) : [...p.electives, code],
-    }))
+  // Unchecking an elective removes its box, so drop its status too.
+  const toggleElective = (fromId: string, code: string) =>
+    setProgress((p) => {
+      const id = `${fromId}:${code}`
+      const picked = p.electives.includes(id)
+      const status = { ...p.status }
+      if (picked) delete status[id]
+      return {
+        status,
+        electives: picked ? p.electives.filter((c) => c !== id) : [...p.electives, id],
+      }
+    })
 
   return (
     <div className="bg-map text-stone-900">
@@ -274,15 +351,31 @@ export function Roadmap() {
           <div className="flex items-center gap-5 md:pr-8">
             <ProgressRing pct={pct} />
             <div>
-              <h2 className="text-sm font-medium text-stone-500">BS in Computer Science</h2>
+              {picker ?? <h2 className="text-sm font-medium text-stone-500">{map.title}</h2>}
+              {map.subtitle && <p className="mt-0.5 text-xs text-stone-500">{map.subtitle}</p>}
               <p className="mt-1 text-3xl font-semibold tracking-tight text-stone-900">
                 {doneCount}
-                <span className="text-stone-400"> / {mapNodes.length}</span>
+                <span className="text-stone-400"> / {slots.length}</span>
               </p>
               <p className="text-sm text-stone-600">
                 courses done
                 {takingCount > 0 && <span className="text-amber-700"> · {takingCount} in progress</span>}
               </p>
+              <dl className="mt-2 flex gap-4 text-sm">
+                <div>
+                  <dt className="text-xs text-stone-500">Credits earned</dt>
+                  <dd className="font-semibold text-stone-900 tabular-nums">{fmtCredits(credits.earned)}</dd>
+                </div>
+                <div title="Credits earned plus credits for courses you're taking now">
+                  <dt className="text-xs text-stone-500">Credits applied</dt>
+                  <dd className="font-semibold text-amber-700 tabular-nums">{fmtCredits(credits.applied)}</dd>
+                </div>
+              </dl>
+              {credits.unknown > 0 && (
+                <p className="mt-1 text-xs text-stone-500">
+                  {credits.unknown} marked course{credits.unknown === 1 ? ' has' : 's have'} no credits listed, not counted
+                </p>
+              )}
             </div>
           </div>
 
@@ -320,12 +413,12 @@ export function Roadmap() {
               </div>
             ) : (
               <p className="mt-3 text-sm text-stone-600">
-                {doneCount === mapNodes.length ? 'Every course on the map is done.' : 'Finish the courses in progress to unlock more.'}
+                {doneCount === slots.length ? 'Every course on the map is done.' : 'Finish the courses in progress to unlock more.'}
               </p>
             )}
           </div>
         </div>
-        <Legend />
+        <Legend tracks={[...new Set(map.nodes.map((n) => n.track))].filter((t) => t !== 'elective')} />
       </header>
 
       {/* The map gets a full screen of height to itself, below the progress card. */}
@@ -360,10 +453,14 @@ export function Roadmap() {
             key={selected.id}
             def={selected}
             status={statusOf(selected.id)}
-            pickedElectives={progress.electives}
+            pickedElectives={progress.electives
+              .filter((p) => p.startsWith(`${selected.id}:`))
+              .map((p) => p.slice(selected.id.length + 1))}
+            alternatives={alternativesOf(graph.nodes, selected)}
             onSetStatus={(s) => setStatus(selected.id, s)}
-            onToggleElective={toggleElective}
+            onToggleElective={(code) => toggleElective(selected.pickedFrom ?? selected.id, code)}
             onSelect={setSelectedId}
+            nodeLabel={(id) => graph.byId[id]?.label ?? id}
             onClose={() => setSelectedId(null)}
           />
         )}
@@ -371,6 +468,9 @@ export function Roadmap() {
     </div>
   )
 }
+
+// Catalog credits can be fractional (e.g. 4.5); show whole numbers without a decimal.
+const fmtCredits = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1))
 
 function ProgressRing({ pct }: { pct: number }) {
   const size = 88
@@ -435,16 +535,14 @@ function ProgressRing({ pct }: { pct: number }) {
   )
 }
 
-const legendTracks: Track[] = ['math', 'core', 'programming', 'english']
-
-function Legend() {
+function Legend({ tracks }: { tracks: Track[] }) {
   return (
     <div
       className="mx-auto mt-4 flex max-w-5xl flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-stone-700 motion-safe:animate-rise"
       style={{ animationDelay: '300ms' }}
     >
       <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-        {legendTracks.map((t) => (
+        {tracks.map((t) => (
           <li key={t} className="flex items-center gap-2">
             <span
               className="inline-block h-3.5 w-5 rounded-sm border-2"

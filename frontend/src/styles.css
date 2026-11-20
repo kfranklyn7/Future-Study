@@ -34,6 +34,8 @@
   --color-track-programming-line: #4f8aa3;
   --color-track-english: #fff27a;
   --color-track-english-line: #b8a600;
+  --color-track-other: #e7e5e4;
+  --color-track-other-line: #78716c;
   --color-done: #d9f2dc;
   --color-done-line: #2f8f46;
 
@@ -138,6 +140,8 @@
     --color-track-programming-line: #5f9fb8;
     --color-track-english: #47411a;
     --color-track-english-line: #c9b52e;
+    --color-track-other: #34302c;
+    --color-track-other-line: #a8a29e;
     --color-done: #1e3b27;
     --color-done-line: #4fb46c;
 

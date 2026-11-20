@@ -17,12 +17,14 @@ export const Route = createFileRoute('/graph')({
 const W = 190, H = 54
 
 // Node colors by kind. Inline styles, because React Flow's CSS layer outranks Tailwind's.
-type Kind = 'ugrad' | 'grad' | 'prereq' | 'external'
+type Kind = 'ugrad' | 'grad' | 'prereq' | 'external' | 'nopage'
 const KIND: Record<Kind, { label: string; background: string; borderColor: string; color: string; borderStyle?: string }> = {
   ugrad: { label: 'Undergraduate', background: 'var(--color-graph-ugrad)', borderColor: 'var(--color-graph-ugrad-line)', color: 'var(--color-stone-900)' },
   grad: { label: 'Graduate', background: 'var(--color-graph-grad)', borderColor: 'var(--color-graph-grad-line)', color: 'var(--color-stone-900)' },
   prereq: { label: 'Prerequisite from outside the program', background: 'var(--color-graph-prereq)', borderColor: 'var(--color-graph-muted-line)', color: 'var(--color-stone-900)' },
   external: { label: 'Outside CISC', background: 'var(--color-graph-external)', borderColor: 'var(--color-graph-muted-line)', color: 'var(--color-stone-500)', borderStyle: 'dashed' },
+  // Named in a prerequisite rule but no course page to open (core curriculum, retired codes).
+  nopage: { label: 'No course page', background: 'var(--color-graph-prereq)', borderColor: 'var(--color-graph-muted-line)', color: 'var(--color-stone-500)', borderStyle: 'dotted' },
 }
 
 // Lay the prerequisite DAG out left-to-right with dagre.
@@ -35,13 +37,21 @@ function layout(g: GraphData): { nodes: Node[]; edges: Edge[] } {
   dagre.layout(d)
   const nodes: Node[] = g.nodes.map(n => {
     const p = d.node(n.id)
-    const kind: Kind = !n.in_catalog ? 'external' : n.in_scope ? (n.division === 'Graduate' ? 'grad' : 'ugrad') : 'prereq'
+    const kind: Kind = !n.has_page ? 'nopage' : !n.in_catalog ? 'external' : n.in_scope ? (n.division === 'Graduate' ? 'grad' : 'ugrad') : 'prereq'
     const { label: _label, ...colors } = KIND[kind]
     return {
       id: n.id,
       position: { x: p.x - W / 2, y: p.y - H / 2 },
-      data: { label: <div><b>{n.id}</b><div className="truncate">{n.title ?? 'outside CISC'}</div></div> },
-      style: { width: W, borderRadius: 8, fontSize: 11, padding: '6px 8px', textAlign: 'left', cursor: 'pointer', borderWidth: 1, ...colors },
+      data: {
+        label: (
+          <div title={n.has_page ? undefined : 'No course page for this course'}>
+            <b>{n.id}</b><div className="truncate">{n.title ?? 'Name not listed'}</div>
+          </div>
+        ),
+        hasPage: n.has_page,
+      },
+      // Courses with no page of their own (core curriculum, retired codes) can't be opened.
+      style: { width: W, borderRadius: 8, fontSize: 11, padding: '6px 8px', textAlign: 'left', cursor: n.has_page ? 'pointer' : 'default', borderWidth: 1, ...colors },
     }
   })
   const edges: Edge[] = g.edges.map(e => ({
@@ -89,7 +99,7 @@ function GraphPage() {
       {!flow ? <Status error={error} /> : (
         <div className="mt-4 h-[72vh] overflow-hidden rounded-xl border border-stone-200 bg-surface">
           <ReactFlow style={{ colorScheme: theme }} nodes={flow.nodes} edges={flow.edges} fitView minZoom={0.1} nodesConnectable={false}
-            onNodeClick={(_, n) => navigate({ to: '/courses/$code', params: { code: n.id } })}>
+            onNodeClick={(_, n) => n.data.hasPage && navigate({ to: '/courses/$code', params: { code: n.id } })}>
             <Background />
             <Controls />
             <MiniMap pannable zoomable />

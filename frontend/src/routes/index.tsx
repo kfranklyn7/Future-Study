@@ -1,10 +1,20 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { Roadmap } from '#/components/map/Roadmap'
+import { DEFAULT_MAP_ID, programMapById, programMaps } from '#/data/programMaps'
 
-// The landing page: the app name, one line on what it is, then the BS in Computer Science course map.
-export const Route = createFileRoute('/')({ component: Home })
+// The landing page: the app name, one line on what it is, then a course map. ?program= picks
+// the major; it defaults to the BS in Computer Science.
+export const Route = createFileRoute('/')({
+  validateSearch: (s: Record<string, unknown>): { program?: string } => ({
+    program: typeof s.program === 'string' && s.program in programMapById ? s.program : undefined,
+  }),
+  component: Home,
+})
 
 function Home() {
+  const { program = DEFAULT_MAP_ID } = Route.useSearch()
+  const navigate = useNavigate()
+  const map = programMapById[program]
   return (
     <>
       <section className="relative z-[1] overflow-hidden border-b border-hero-line bg-hero px-4 shadow-[0_1px_2px_-1px_rgb(80_60_40/0.1),0_6px_16px_-10px_rgb(80_60_40/0.16)] pt-16 pb-14 text-center sm:pt-20 sm:pb-16">
@@ -33,7 +43,33 @@ function Home() {
         </p>
       </section>
       <section id="map" aria-label="Course map" className="scroll-mt-14">
-        <Roadmap />
+        <Roadmap
+          key={map.id}
+          map={map}
+          picker={
+            <label className="block">
+              <span className="sr-only">Course map for</span>
+              <select
+                className="field -ml-1 max-w-full py-1 text-sm font-medium"
+                value={map.id}
+                onChange={(e) =>
+                  navigate({
+                    to: '/',
+                    search: e.target.value === DEFAULT_MAP_ID ? {} : { program: e.target.value },
+                    hash: 'map',
+                    resetScroll: false,
+                  })
+                }
+              >
+                {programMaps.map((m) => (
+                  <option key={m.id} value={m.id}>
+                    {m.title}
+                  </option>
+                ))}
+              </select>
+            </label>
+          }
+        />
       </section>
     </>
   )

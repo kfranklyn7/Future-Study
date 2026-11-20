@@ -16,14 +16,15 @@ export function CourseLink({ code, className = 'link', children }: { code: strin
   return <Link to="/courses/$code" params={{ code }} className={className}>{children ?? code}</Link>
 }
 
-export function CourseList({ items, empty }: { items: { course_code: string; title: string | null }[]; empty: string }) {
+// Courses with no page of their own (core curriculum, retired codes) are plain text, not links.
+export function CourseList({ items, empty }: { items: { course_code: string; title: string | null; has_page?: boolean }[]; empty: string }) {
   if (!items.length) return <p className="text-stone-500">{empty}</p>
   return (
     <ul className="list-disc space-y-1 pl-5">
       {items.map(i => <li key={i.course_code}>
-        {i.title
+        {(i.has_page ?? !!i.title)
           ? <CourseLink code={i.course_code}>{i.course_code} {i.title}</CourseLink>
-          : <span className="text-stone-500">{i.course_code} (outside CISC)</span>}
+          : <span className="text-stone-500">{i.course_code}{i.title ? ` ${i.title}` : ''} (no course page)</span>}
       </li>)}
     </ul>
   )
