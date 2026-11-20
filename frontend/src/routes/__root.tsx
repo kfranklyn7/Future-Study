@@ -16,6 +16,7 @@ const NAV = [
   { to: '/courses', label: 'Courses' },
   { to: '/programs', label: 'Programs' },
   { to: '/graph', label: 'Course map' },
+  { to: '/map', label: 'Roadmap' },
   { to: '/careers', label: 'Careers' },
 ] as const
 
