@@ -225,9 +225,9 @@ export function Roadmap() {
 
   return (
     <div className="bg-[#faf8f3] text-stone-900">
-      <header className="z-10 border-b border-stone-200 px-4 pb-5 sm:px-6">
+      <header className="z-10 border-b border-stone-200 px-4 pt-6 pb-5 sm:px-6">
         <div
-          className="mx-auto grid max-w-5xl gap-6 rounded-2xl border border-stone-200 bg-white p-5 shadow-[0_1px_2px_rgb(0_0_0/0.05)] motion-safe:animate-rise sm:p-6 md:grid-cols-[auto_1fr] md:items-center md:gap-0"
+          className="mx-auto grid max-w-5xl gap-6 rounded-2xl border border-stone-200 bg-[#fdfbf7] p-5 shadow-[0_1px_2px_rgb(0_0_0/0.05)] motion-safe:animate-rise sm:p-6 md:grid-cols-[auto_1fr] md:items-center md:gap-0"
           style={{ animationDelay: '180ms' }}
         >
           <div className="flex items-center gap-5 md:pr-8">
@@ -265,7 +265,7 @@ export function Roadmap() {
                   <button
                     key={n.id}
                     onClick={() => setSelectedId(n.id)}
-                    className="flex items-center gap-2 rounded-lg border border-stone-200 bg-stone-50 px-3 py-1.5 text-sm font-medium text-stone-800 transition-colors hover:border-accent/50 hover:bg-accent-soft hover:text-accent motion-safe:animate-rise"
+                    className="flex items-center gap-2 rounded-lg border border-stone-200 bg-[#f6f2ea] px-3 py-1.5 text-sm font-medium text-stone-800 transition-colors hover:border-accent/50 hover:bg-accent-soft hover:text-accent motion-safe:animate-rise"
                     style={{ animationDelay: `${(intro ? 420 : 0) + i * 60}ms` }}
                   >
                     <span
