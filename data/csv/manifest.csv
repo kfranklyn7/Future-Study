@@ -1,0 +1,13 @@
+file_name,rows,columns,description
+programs.csv,10,13,"CIS undergraduate, graduate, and minor programs from the program finder."
+program_sections.csv,93,5,Requirement and overview sections parsed from each program page.
+program_courses.csv,71,4,CISC course codes mentioned in each program's requirements.
+courses.csv,172,19,"All CISC courses found in the inventory, bulletins, or department schedule."
+course_requisites.csv,372,13,"Catalog prerequisites plus other-department major requirements, including the MATH 1006 placement sequence."
+courses_offered_recent.csv,153,19,Courses offered in the recent academic-year window. Subset of courses.csv.
+bulletins.csv,19,9,Undergraduate and graduate bulletin PDFs parsed for the recent window.
+bulletin_courses.csv,807,14,"Course entries extracted from each bulletin PDF, including inactive listings."
+course_offerings.csv,145,13,Department schedule rows from the undergraduate and graduate CIS pages.
+syllabi.csv,91,11,Syllabus PDFs linked from the CIS undergraduate and graduate resource pages.
+related_documents.csv,9,9,"Other PDFs linked from those pages, such as prerequisite diagrams and checklists."
+degree_map_courses.csv,1135,12,"Courses on four-year degree maps for the CIS programs, by bulletin year."
