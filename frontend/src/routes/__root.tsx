@@ -31,8 +31,10 @@ function RootComponent() {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-30 h-14 shrink-0 border-b border-stone-200 bg-white">
         <div className="flex h-full items-center gap-4 px-4 sm:px-6 md:grid md:grid-cols-[1fr_auto_1fr]">
-          <Link to="/" className="shrink-0 justify-self-start text-lg font-bold tracking-tight text-stone-900 hover:no-underline">
-            Future<span className="text-accent">Study</span>
+          <Link to="/" className="shrink-0 justify-self-start font-display text-xl font-semibold tracking-tight text-[#3b2a22] hover:no-underline"
+            style={{ fontVariationSettings: "'SOFT' 100" }}
+          >
+            future<span className="text-[#9a3b52]">study</span>
           </Link>
           <nav aria-label="Main" className="flex min-w-0 gap-1 overflow-x-auto [scrollbar-width:none] text-sm font-medium whitespace-nowrap">
             {NAV.map((n) => (
