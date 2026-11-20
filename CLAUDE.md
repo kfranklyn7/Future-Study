@@ -15,6 +15,11 @@ precomputed by `snowflake/ai_enrichment.sql`; only `/api/recommend` calls Cortex
 - `scrape_brooklyn_cis.py`: the main scraper. Pulls CIS programs, the course inventory,
   undergraduate and graduate bulletin PDFs, department schedules, syllabi, related PDFs and
   degree maps from brooklyn.edu, then writes one CSV per table to `data/csv/`.
+- `scrape_prereq_courses.py`: looks up the non-CISC courses (MATH, BUSN, ECON, ...) named in
+  `course_requisites.csv` on the course inventory and follows their own prerequisites
+  (`--depth 3`). Writes `prereq_courses.csv` and `prereq_course_requisites.csv`. Run it after
+  the main scraper; pages are cached in `data/cache/prereq_courses`. CORC (core curriculum)
+  courses aren't in the inventory, so they come back with `found = FALSE`.
 - `scrape_rmp.py`: pulls Rate My Professors ratings for Brooklyn College professors
   whose course tags match a course in `course_offerings.csv`, writes `rmp_professors.csv`.
 - `scraper/`: a separate, smaller course catalog scraper (`scrape_courses.py`) with its
@@ -117,6 +122,8 @@ such as `2820W` or `7100X`).
 | `syllabi.csv` | Full syllabus text per course (good input for Cortex) |
 | `related_documents.csv` | Other linked PDFs (prereq diagrams, checklists) |
 | `degree_map_courses.csv` | Four-year degree maps by program and bulletin year |
+| `prereq_courses.csv` | Non-CISC courses that CISC courses or programs require (`found` is FALSE when the inventory has no page) |
+| `prereq_course_requisites.csv` | Prerequisite edges among those non-CISC courses |
 
 CSVs are written without a pandas index column, so they load into Snowflake directly.
 

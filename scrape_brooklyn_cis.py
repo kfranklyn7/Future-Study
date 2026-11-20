@@ -1080,8 +1080,11 @@ def _requisite_kind(label: str) -> str:
     return "prerequisite"
 
 
-def extract_requisite_refs(text: str) -> list[tuple[str, str, str]]:
-    """Return (relationship, dept, number) mentions in catalog requirement text."""
+def extract_requisite_refs(text: str, default_dept: str = "CISC") -> list[tuple[str, str, str]]:
+    """Return (relationship, dept, number) mentions in catalog requirement text.
+
+    Bare course numbers belong to default_dept until another department is named.
+    """
     if not text or not str(text).strip():
         return []
     raw = str(text).strip()
@@ -1102,7 +1105,7 @@ def extract_requisite_refs(text: str) -> list[tuple[str, str, str]]:
     refs: list[tuple[str, str, str]] = []
     seen: set[tuple[str, str, str]] = set()
     for relationship, body in segments:
-        department = "CISC"
+        department = default_dept
         for match in _REQUISITE_DEPT_RE.finditer(body):
             if match.group(1):
                 department = REQUISITE_DEPARTMENTS[match.group(1).lower()]

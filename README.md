@@ -28,6 +28,7 @@ the one-liner at the top of that file.
 1. Data (only needed when the CSVs change):
    ```bash
    pip install -r requirements.txt snowflake-connector-python[pandas]
+   python scrape_prereq_courses.py                           # non-CISC prerequisites (MATH, BUSN, ...)
    python snowflake/load_csvs.py
    python snowflake/run_sql.py snowflake/ai_enrichment.sql   # ~2 min of Cortex calls
    python snowflake/check_urls.py                            # needs normal internet access
@@ -44,9 +45,9 @@ the one-liner at the top of that file.
 | Endpoint | Returns |
 |---|---|
 | `GET /api/courses?division=&recent=true` | Course list with AI topics |
-| `GET /api/courses/{code}` | Details, career paths, free resources, skills, prereqs, unlocks, programs |
+| `GET /api/courses/{code}` | Details, career paths, free resources, skills, prereqs, unlocks, programs. Non-CISC prerequisites (e.g. `MATH 1201`) return details from `PREREQ_COURSES` |
 | `GET /api/programs`, `/api/programs/{id}` | Programs with career paths and general resources |
-| `GET /api/graph?program={id}` | Prerequisite graph nodes/edges (omit `program` for the whole catalog) |
+| `GET /api/graph?program={id}` | Prerequisite graph nodes/edges (omit `program` for the whole catalog); non-CISC prerequisites are followed back through their own prerequisites |
 | `GET /api/careers?title=` | Canonical career paths and the courses that lead to them |
 | `GET /api/search?q=&division=` | Cortex Search over course text, syllabi, topics, careers |
 | `POST /api/recommend {"interests", "division"}` | Search + `AI_COMPLETE` ranking with reasons |

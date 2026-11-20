@@ -1,15 +1,18 @@
-"""Build frontend/src/data/courses.json for the /map route from data/csv.
+"""Build frontend/src/data/courses.json for the course map from Snowflake (CISC.CORE).
 
-Run from the repo root:  python frontend/scripts/build_map_data.py
+Uses the same environment variables as snowflake/load_csvs.py. Run from the repo root:
+  python frontend/scripts/build_map_data.py
 """
 import json
-import re
+import sys
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-CSV = ROOT / "data" / "csv"
+sys.path.insert(0, str(ROOT / "snowflake"))
+from load_csvs import connect  # noqa: E402
+
 OUT = ROOT / "frontend" / "src" / "data" / "courses.json"
 
 # Courses drawn on the BS in Computer Science prerequisite flowchart.
@@ -28,12 +31,24 @@ def clean(v):
     return str(v).strip() or None
 
 
+def query(cur, sql):
+    cur.execute(sql)
+    frame = cur.fetch_pandas_all()
+    frame.columns = [c.lower() for c in frame.columns]
+    return frame
+
+
 def main():
-    courses = pd.read_csv(CSV / "courses.csv")
-    syllabi = pd.read_csv(CSV / "syllabi.csv")
+    conn = connect()
+    cur = conn.cursor()
+    courses = query(cur, "SELECT * FROM CISC.CORE.COURSES")
+    syllabi = query(cur, "SELECT COURSE_CODE, SOURCE_URL FROM CISC.CORE.SYLLABI WHERE SOURCE_URL <> ''")
+    conn.close()
+    # load_csvs.py stores every column as text.
+    courses["offered_in_window"] = courses.offered_in_window.str.upper().eq("TRUE")
+    courses["credits"] = pd.to_numeric(courses.credits, errors="coerce")
     syllabus_url = (
-        syllabi.dropna(subset=["source_url"])
-        .drop_duplicates("course_code")
+        syllabi.drop_duplicates("course_code")
         .set_index("course_code")["source_url"]
         .to_dict()
     )
@@ -55,7 +70,7 @@ def main():
     core = {c: record(by_code.loc[c]) for c in MAP_COURSES if c in by_code.index}
 
     ug = courses[(courses.division == "Undergraduate") & (courses.offered_in_window == True)]
-    num = ug.course_number.astype(str).str.extract(r"^(\d+)")[0].astype(int)
+    num = pd.to_numeric(ug.course_number.astype(str).str.extract(r"^(\d+)")[0])
     electives = ug[num.between(3000, 4899) & ~ug.course_code.isin(NOT_ELECTIVE)]
     electives = sorted((record(r) for r in electives.itertuples()), key=lambda d: d["code"])
 

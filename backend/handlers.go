@@ -103,13 +103,20 @@ func (a *api) listCourses(w http.ResponseWriter, r *http.Request) {
 func (a *api) getCourse(w http.ResponseWriter, r *http.Request) {
 	code := r.PathValue("code")
 	ctx := r.Context()
+	// Non-CISC prerequisites (MATH, BUSN, ...) come from PREREQ_COURSES and have no AI or syllabus data.
 	course, err := a.query(ctx, `
 		SELECT c.COURSE_CODE, c.TITLE, c.DIVISION, c.CREDITS, c.HOURS, c.DESCRIPTION, c.PREREQUISITES,
 		       c.OFFERED_IN_WINDOW = 'TRUE' AS RECENT, c.SCHEDULED_TERMS, c.INVENTORY_URL,
 		       ai.AI:topics AS TOPICS, ai.AI:skills AS SKILLS,
 		       (SELECT ARRAY_AGG(DISTINCT SOURCE_URL) FROM SYLLABI s WHERE s.COURSE_CODE = c.COURSE_CODE) AS SYLLABUS_URLS
 		FROM COURSES c LEFT JOIN COURSE_AI ai ON ai.COURSE_CODE = c.COURSE_CODE
-		WHERE c.COURSE_CODE = ?`, code)
+		WHERE c.COURSE_CODE = ?
+		UNION ALL
+		SELECT p.COURSE_CODE, p.TITLE, p.DIVISION, p.CREDITS, p.HOURS, p.DESCRIPTION, p.PREREQUISITES,
+		       FALSE, '', p.SOURCE_URL, NULL, NULL, NULL
+		FROM PREREQ_COURSES p
+		WHERE p.COURSE_CODE = ? AND p.FOUND = 'TRUE'
+		  AND NOT EXISTS (SELECT 1 FROM COURSES c WHERE c.COURSE_CODE = p.COURSE_CODE)`, code, code)
 	if err != nil {
 		writeErr(w, http.StatusInternalServerError, err)
 		return
@@ -123,12 +130,16 @@ func (a *api) getCourse(w http.ResponseWriter, r *http.Request) {
 		"careers": `SELECT TITLE, CAREER, WHY, RELEVANCE, NEXT_STEPS FROM COURSE_CAREERS WHERE COURSE_CODE = ? ORDER BY RANK`,
 		"resources": `SELECT TITLE, URL, PROVIDER, TYPE, URL_OK FROM RESOURCES
 		              WHERE SCOPE = 'course' AND SCOPE_ID = ? AND COALESCE(URL_OK, TRUE) ORDER BY TYPE, TITLE`,
-		"prerequisites_of": `SELECT DISTINCT q.REQUIRES_CODE AS COURSE_CODE, c.TITLE, q.RELATIONSHIP
-		              FROM COURSE_REQUISITES q LEFT JOIN COURSES c ON c.COURSE_CODE = q.REQUIRES_CODE
-		              WHERE q.COURSE_CODE = ? AND q.PROGRAM_ID = '' ORDER BY 1`,
-		"unlocks": `SELECT DISTINCT q.COURSE_CODE, c.TITLE, q.RELATIONSHIP
-		              FROM COURSE_REQUISITES q LEFT JOIN COURSES c ON c.COURSE_CODE = q.COURSE_CODE
-		              WHERE q.REQUIRES_CODE = ? AND q.PROGRAM_ID = '' ORDER BY 1`,
+		"prerequisites_of": `SELECT DISTINCT q.REQUIRES_CODE AS COURSE_CODE, COALESCE(c.TITLE, p.TITLE) AS TITLE, q.RELATIONSHIP
+		              FROM ` + allRequisites + ` q
+		              LEFT JOIN COURSES c ON c.COURSE_CODE = q.REQUIRES_CODE
+		              LEFT JOIN PREREQ_COURSES p ON p.COURSE_CODE = q.REQUIRES_CODE
+		              WHERE q.COURSE_CODE = ? ORDER BY 1`,
+		"unlocks": `SELECT DISTINCT q.COURSE_CODE, COALESCE(c.TITLE, p.TITLE) AS TITLE, q.RELATIONSHIP
+		              FROM ` + allRequisites + ` q
+		              LEFT JOIN COURSES c ON c.COURSE_CODE = q.COURSE_CODE
+		              LEFT JOIN PREREQ_COURSES p ON p.COURSE_CODE = q.COURSE_CODE
+		              WHERE q.REQUIRES_CODE = ? ORDER BY 1`,
 		"programs": `SELECT DISTINCT p.PROGRAM_ID, p.TITLE FROM PROGRAM_COURSES pc
 		              JOIN PROGRAMS p ON p.PROGRAM_ID = pc.PROGRAM_ID WHERE pc.COURSE_CODE = ? ORDER BY 2`,
 	}
@@ -187,38 +198,66 @@ func (a *api) getProgram(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, out)
 }
 
+// allRequisites is every catalog prerequisite edge: CISC courses' rules plus the rules of the
+// non-CISC courses they name (PREREQ_COURSE_REQUISITES, from scrape_prereq_courses.py).
+const allRequisites = `(
+		SELECT COURSE_CODE, REQUIRES_CODE, RELATIONSHIP FROM COURSE_REQUISITES WHERE PROGRAM_ID = ''
+		UNION
+		SELECT COURSE_CODE, REQUIRES_CODE, RELATIONSHIP FROM PREREQ_COURSE_REQUISITES
+	)`
+
+// graphEdges selects the edges of the prerequisite graph for a program (or, with '', the whole
+// CISC catalog): the scope's own prerequisite edges, then non-CISC prerequisite chains followed
+// back through PREREQ_COURSE_REQUISITES (MATH 1206 -> MATH 1201 -> MATH 1011). Chains stop at
+// CISC courses so the graph doesn't pull in CISC courses outside the program. Binds program twice.
+const graphEdges = `
+		WITH RECURSIVE scope AS (
+		  SELECT COURSE_CODE FROM PROGRAM_COURSES WHERE PROGRAM_ID = ?
+		  UNION SELECT COURSE_CODE FROM COURSES WHERE ? = ''
+		),
+		direct AS (
+		  SELECT DISTINCT REQUIRES_CODE AS SOURCE, COURSE_CODE AS TARGET, RELATIONSHIP
+		  FROM COURSE_REQUISITES
+		  WHERE PROGRAM_ID = '' AND COURSE_CODE IN (SELECT COURSE_CODE FROM scope)
+		    AND REQUIRES_CODE <> COURSE_CODE
+		),
+		chain (SOURCE, TARGET, RELATIONSHIP, DEPTH) AS (
+		  SELECT x.REQUIRES_CODE, x.COURSE_CODE, x.RELATIONSHIP, 1
+		  FROM PREREQ_COURSE_REQUISITES x
+		  WHERE x.REQUIRES_DEPT <> 'CISC' AND x.COURSE_CODE IN (SELECT SOURCE FROM direct WHERE SOURCE NOT LIKE 'CISC %')
+		  UNION ALL
+		  SELECT x.REQUIRES_CODE, x.COURSE_CODE, x.RELATIONSHIP, c.DEPTH + 1
+		  FROM PREREQ_COURSE_REQUISITES x JOIN chain c ON x.COURSE_CODE = c.SOURCE
+		  WHERE x.REQUIRES_DEPT <> 'CISC' AND c.DEPTH < 6
+		),
+		edges AS (
+		  SELECT SOURCE, TARGET, RELATIONSHIP FROM direct
+		  UNION SELECT SOURCE, TARGET, RELATIONSHIP FROM chain WHERE SOURCE <> TARGET
+		)`
+
 // GET /api/graph?program=<id>: prerequisite graph. With a program, nodes are that program's
-// courses plus their direct prerequisites; without one, the whole CISC catalog.
+// courses plus their prerequisites (non-CISC ones followed back to their own prerequisites);
+// without one, the whole CISC catalog.
 func (a *api) graph(w http.ResponseWriter, r *http.Request) {
 	program := r.URL.Query().Get("program")
 	ctx := r.Context()
-	edges, err := a.query(ctx, `
-		WITH scope AS (
-		  SELECT COURSE_CODE FROM PROGRAM_COURSES WHERE PROGRAM_ID = ?
-		  UNION SELECT COURSE_CODE FROM COURSES WHERE ? = ''
-		)
-		SELECT DISTINCT q.REQUIRES_CODE AS SOURCE, q.COURSE_CODE AS TARGET, q.RELATIONSHIP
-		FROM COURSE_REQUISITES q
-		WHERE q.PROGRAM_ID = '' AND q.COURSE_CODE IN (SELECT COURSE_CODE FROM scope)
-		  AND q.REQUIRES_CODE <> q.COURSE_CODE`, program, program)
+	edges, err := a.query(ctx, graphEdges+`
+		SELECT SOURCE, TARGET, RELATIONSHIP FROM edges ORDER BY 1, 2`, program, program)
 	if err != nil {
 		writeErr(w, http.StatusInternalServerError, err)
 		return
 	}
-	nodes, err := a.query(ctx, `
-		WITH scope AS (
-		  SELECT COURSE_CODE FROM PROGRAM_COURSES WHERE PROGRAM_ID = ?
-		  UNION SELECT COURSE_CODE FROM COURSES WHERE ? = ''
-		),
+	nodes, err := a.query(ctx, graphEdges+`,
 		ids AS (
 		  SELECT COURSE_CODE AS ID, TRUE AS IN_SCOPE FROM scope
-		  UNION
-		  SELECT REQUIRES_CODE, FALSE FROM COURSE_REQUISITES
-		  WHERE PROGRAM_ID = '' AND COURSE_CODE IN (SELECT COURSE_CODE FROM scope)
+		  UNION SELECT SOURCE, FALSE FROM edges
+		  UNION SELECT TARGET, FALSE FROM edges
 		)
-		SELECT i.ID, MAX(c.TITLE) AS TITLE, MAX(c.DIVISION) AS DIVISION, BOOLOR_AGG(i.IN_SCOPE) AS IN_SCOPE,
-		       BOOLOR_AGG(c.COURSE_CODE IS NOT NULL) AS IN_CATALOG
-		FROM ids i LEFT JOIN COURSES c ON c.COURSE_CODE = i.ID
+		SELECT i.ID, COALESCE(MAX(c.TITLE), MAX(p.TITLE)) AS TITLE, COALESCE(MAX(c.DIVISION), MAX(p.DIVISION)) AS DIVISION,
+		       BOOLOR_AGG(i.IN_SCOPE) AS IN_SCOPE, BOOLOR_AGG(c.COURSE_CODE IS NOT NULL) AS IN_CATALOG
+		FROM ids i
+		LEFT JOIN COURSES c ON c.COURSE_CODE = i.ID
+		LEFT JOIN PREREQ_COURSES p ON p.COURSE_CODE = i.ID AND p.FOUND = 'TRUE'
 		GROUP BY i.ID ORDER BY i.ID`, program, program)
 	if err != nil {
 		writeErr(w, http.StatusInternalServerError, err)
