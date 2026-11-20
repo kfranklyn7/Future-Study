@@ -21,7 +21,8 @@ func env(key, def string) string {
 }
 
 // openSnowflake builds a connection from environment variables. Credentials are never read
-// from files in the repo. OAuth (SNOWFLAKE_TOKEN_FILE_PATH) is used when present, else password.
+// from files in the repo. OAuth (SNOWFLAKE_TOKEN_FILE_PATH) is used when present, then browser
+// SSO (SNOWFLAKE_AUTHENTICATOR=externalbrowser), else password.
 func openSnowflake() (*sql.DB, error) {
 	cfg := &sf.Config{
 		Account:   env("SNOWFLAKE_ACCOUNT", ""),
@@ -39,7 +40,13 @@ func openSnowflake() (*sql.DB, error) {
 		}
 	}
 	if cfg.Authenticator != sf.AuthTypeOAuth {
-		cfg.Password = os.Getenv("SNOWFLAKE_PASSWORD")
+		if strings.EqualFold(os.Getenv("SNOWFLAKE_AUTHENTICATOR"), "externalbrowser") {
+			cfg.Authenticator = sf.AuthTypeExternalBrowser
+			// Cache the SSO token so each pooled connection doesn't open another browser tab.
+			cfg.ClientStoreTemporaryCredential = sf.ConfigBoolTrue
+		} else {
+			cfg.Password = os.Getenv("SNOWFLAKE_PASSWORD")
+		}
 	}
 	dsn, err := sf.DSN(cfg)
 	if err != nil {

@@ -22,6 +22,9 @@ Set Snowflake credentials in your shell (never commit them):
 export SNOWFLAKE_ACCOUNT=... SNOWFLAKE_USER=... SNOWFLAKE_PASSWORD=... SNOWFLAKE_WAREHOUSE=COMPUTE_WH SNOWFLAKE_ROLE=SYSADMIN
 ```
 
+Or copy `backend/.env.example` to `backend/.env` (gitignored), fill it in, and load it with
+the one-liner at the top of that file.
+
 1. Data (only needed when the CSVs change):
    ```bash
    pip install -r requirements.txt snowflake-connector-python[pandas]
