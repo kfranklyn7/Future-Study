@@ -442,7 +442,7 @@ export function Roadmap({ map, picker }: { map: ProgramMap; picker?: ReactNode }
           fitViewOptions={{ padding: '24px' }}
           minZoom={MIN_ZOOM}
           maxZoom={MAX_ZOOM}
-          proOptions={{ hideAttribution: true }}
+          proOptions={{ hideAttribution: false }}
         >
           <Background variant={BackgroundVariant.Dots} gap={22} size={1.2} color={dark ? '#4a433c' : '#d6d3d1'} />
           <Controls showInteractive={false} position="bottom-left" />
