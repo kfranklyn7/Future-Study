@@ -1,373 +1,373 @@
 course_code,program_id,requires_code,requires_dept,requires_number,relationship,source,group_id,group_operator,waivable,in_cisc_catalog,note,scraped_at
-CISC 1030,,CORC 1312,CORC,1312,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1035,,CORC 1312,CORC,1312,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1060,,CORC 1312,CORC,1312,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1060,,CORC 3303,CORC,3303,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1062,,CORC 1312,CORC,1312,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1062,,CORC 3303,CORC,3303,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1112,,CISC 1111,CISC,1111,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1114,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1150,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1150,,CISC 3110,CISC,3110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1150,,CISC 3115,CISC,3115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1155,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1160,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1341,,CISC 1110,CISC,1110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1341,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1341,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1341,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1341,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1341,,CISC 1180,CISC,1180,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1400,,CORC 1311,CORC,1311,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1400,,MATH 1311,MATH,1311,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1530,,CISC 1050,CISC,1050,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1530,,CISC 1110,CISC,1110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1530,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1530,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1530,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,BUSN 3200,BUSN,3200,pre_or_corequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1580W,,BUSN 3400,BUSN,3400,pre_or_corequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1580W,,BUSN 3430,BUSN,3430,pre_or_corequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1580W,,CISC 1050,CISC,1050,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,CISC 1110,CISC,1110,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,CISC 1113,CISC,1113,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,CISC 1114,CISC,1114,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,CISC 1115,CISC,1115,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,CISC 1170,CISC,1170,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,CISC 1180,CISC,1180,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,CISC 2531,CISC,2531,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1580W,,ENGL 1012,ENGL,1012,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1580W,,MATH 2501,MATH,2501,pre_or_corequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1580W,,MATH 3501,MATH,3501,pre_or_corequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1580W,,PSYC 3400,PSYC,3400,pre_or_corequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 1590,,CISC 1050,CISC,1050,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 1595,,CISC 1050,CISC,1050,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2210,,CISC 1110,CISC,1110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2210,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2210,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2210,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2210,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2210,,CISC 1180,CISC,1180,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2210,,CISC 1215,CISC,1215,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2210,,MATH 1011,MATH,1011,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2210,,MATH 1012,MATH,1012,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2210,,MATH 1201,MATH,1201,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2531,,BUSN 3400,BUSN,3400,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 1000,CISC,1000,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 1050,CISC,1050,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 1110,CISC,1110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 1180,CISC,1180,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2531,,CORC 1312,CORC,1312,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2531,,ECON 3400,ECON,3400,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2531,,MATH 2501,MATH,2501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2531,,MATH 3501,MATH,3501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2531,,PSYC 3400,PSYC,3400,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2532,,BUSN 3420,BUSN,3420,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2532,,CISC 1590,CISC,1590,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2590,,BUSN 3400,BUSN,3400,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2590,,CISC 1050,CISC,1050,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2590,,ECON 3400,ECON,3400,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2590,,MATH 1501,MATH,1501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2590,,PSYC 3400,PSYC,3400,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2600,,MUSC 3260,MUSC,3260,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2810W,,ENGL 1001,ENGL,1001,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2810W,,ENGL 1002,ENGL,1002,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2810W,,ENGL 1012,ENGL,1012,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2820W,,CISC 1000,CISC,1000,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2820W,,CISC 1110,CISC,1110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2820W,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2820W,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2820W,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2820W,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2820W,,CISC 1180,CISC,1180,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2820W,,CORC 1312,CORC,1312,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2820W,,ENGL 1012,ENGL,1012,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2830,,CISC 1110,CISC,1110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2830,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2830,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2830,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2830,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2830,,CISC 1180,CISC,1180,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2830,,CISC 2210,CISC,2210,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 2830,,LING 2001,LING,2001,pre_or_corequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3110,,CISC 1110,CISC,1110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3110,,CISC 1180,CISC,1180,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3115,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3115,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3115,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3115,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3120,,CISC 3110,CISC,3110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3130,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3130,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3130,,CISC 3110,CISC,3110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3130,,CISC 3115,CISC,3115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3140,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3140,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3140,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3140,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3140,,CISC 3115,CISC,3115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3140,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3141,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3141,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3141,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3141,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3141,,CISC 3115,CISC,3115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3141,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3142,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3142,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3142,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3142,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3142,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3142,,CISC 3310,CISC,3310,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3144,,CISC 3140,CISC,3140,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3146,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3150,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3160,,CISC 3142,CISC,3142,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3171,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3220,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3220,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3220,,MATH 1201,MATH,1201,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3225,,CISC 1215,CISC,1215,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3225,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3225,,MATH 2001,MATH,2001,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3230,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3230,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3230,,MATH 1201,MATH,1201,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3240,,MATH 2101,MATH,2101,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3250,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3250,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3305,,CISC 1341,CISC,1341,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3305,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3310,,CISC 1110,CISC,1110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3310,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3310,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3310,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3310,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3310,,CISC 1180,CISC,1180,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3310,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3315,,CISC 1341,CISC,1341,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3315,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3320,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3320,,CISC 3305,CISC,3305,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3320,,CISC 3310,CISC,3310,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3320,,CISC 3315,CISC,3315,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3325,,CISC 3320,CISC,3320,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3330,,CISC 3142,CISC,3142,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3340,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3340,,CISC 3305,CISC,3305,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3340,,CISC 3310,CISC,3310,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3340,,CISC 3315,CISC,3315,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3340,,MATH 2501,MATH,2501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3343,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3343,,CISC 3305,CISC,3305,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3343,,CISC 3310,CISC,3310,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3343,,CISC 3315,CISC,3315,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3343,,MATH 2501,MATH,2501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3345,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3345,,CISC 3305,CISC,3305,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3345,,CISC 3310,CISC,3310,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3345,,CISC 3315,CISC,3315,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3350,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3390,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3390,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3390,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3390,,CISC 1150,CISC,1150,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3390,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3390,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3390,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3410,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3415,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3415,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3440,,CISC 2210,CISC,2210,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3440,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3440,,CISC 3225,CISC,3225,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3440,,MATH 2501,MATH,2501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3440,,MATH 3501,MATH,3501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3610,,CISC 3110,CISC,3110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3610,,CISC 3115,CISC,3115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3620,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3620,,MATH 1011,MATH,1011,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3620,,MATH 1012,MATH,1012,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3620,,MATH 1026,MATH,1026,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3620,,MATH 1201,MATH,1201,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3630,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3650,,CISC 3115,CISC,3115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3650,,CISC 3120,CISC,3120,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3660,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3665,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3665,,MATH 1011,MATH,1011,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3665,,MATH 1012,MATH,1012,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3665,,MATH 1201,MATH,1201,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3667,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3800,,CISC 1050,CISC,1050,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3800,,CISC 1113,CISC,1113,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3800,,CISC 1114,CISC,1114,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3800,,CISC 1115,CISC,1115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3800,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3800,,CISC 1180,CISC,1180,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3810,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3820,,CISC 3110,CISC,3110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3820,,CISC 3115,CISC,3115,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 3820,,MATH 2501,MATH,2501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 3820,,MATH 3501,MATH,3501,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 4331,,CISC 3320,CISC,3320,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4331,,CISC 3350,CISC,3350,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 1150,CISC,1150,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 1170,CISC,1170,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3150,CISC,3150,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3160,CISC,3160,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3305,CISC,3305,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3310,CISC,3310,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3315,CISC,3315,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3320,CISC,3320,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3330,CISC,3330,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3350,CISC,3350,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3410,CISC,3410,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4335,,CISC 3820,CISC,3820,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4610,,CISC 3630,CISC,3630,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4610,,CISC 3635,CISC,3635,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4610,,CISC 3810,CISC,3810,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4800,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4900,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4905,,CISC 4900,CISC,4900,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4920,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4920,,CISC 3220,CISC,3220,pre_or_corequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4945,,CISC 4940,CISC,4940,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 4955,,CISC 4950,CISC,4950,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 5001,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 5002,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 5003,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 5004,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7124X,,CISC 7110X,CISC,7110X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7124X,,CISC 7120X,CISC,7120X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7124X,,CISC 7122X,CISC,7122X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7124X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7124X,,CISC 7312X,CISC,7312X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7212X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7214X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7220X,,CISC 7221X,CISC,7221X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7224X,,CISC 7221X,CISC,7221X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7226X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7226X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7228X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7230X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7310X,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7310X,,CISC 3310,CISC,3310,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7312X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7320X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7320X,,MATH 7280X,MATH,7280X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7330X,,CISC 7300X,CISC,7300X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7330X,,CISC 7302X,CISC,7302X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7330X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7330X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7332X,,CISC 7300X,CISC,7300X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7332X,,CISC 7302X,CISC,7302X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7332X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7332X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7334X,,CISC 7300X,CISC,7300X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7334X,,CISC 7302X,CISC,7302X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7334X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7334X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7340X,,CISC 7100X,CISC,7100X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7340X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7350X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7352X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7352X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7352X,,MATH 7280X,MATH,7280X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7410X,,CISC 3310,CISC,3310,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7412X,,CISC 7410X,CISC,7410X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7414X,,CISC 7410X,CISC,7410X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7422X,,CISC 6004X,CISC,6004X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7440X,,CISC 7410X,CISC,7410X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7440X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7440X,,MATH 7280X,MATH,7280X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7442X,,CISC 7440X,CISC,7440X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7442X,,CISC 7650X,CISC,7650X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7450X,,CISC 7000,CISC,7000,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7500X,,CISC 3110,CISC,3110,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7510X,,CISC 1050,CISC,1050,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7510X,,CISC 3810,CISC,3810,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7512X,,CISC 7510X,CISC,7510X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7522X,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7532X,,CISC 7500X,CISC,7500X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7534X,,CISC 7500X,CISC,7500X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7610X,,CISC 7510X,CISC,7510X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7620X,,CISC 3130,CISC,3130,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7650X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7650X,,MATH 7280X,MATH,7280X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7700X,,CISC 7510X,CISC,7510X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7704X,,CISC 7278X,CISC,7278X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7704X,,CISC 7280X,CISC,7280X,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 7902X,,CISC 7900X,CISC,7900X,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7992G,,CISC 7990G,CISC,7990G,prerequisite,catalog,,,False,True,,2026-11-20T16:41:34+00:00
-CISC 7994G,,CISC 7992,CISC,7992,prerequisite,catalog,,,False,False,,2026-11-20T16:41:34+00:00
-CISC 2210,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-CISC 3220,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-CISC 3230,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-CISC 3620,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-CISC 3665,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-MATH 1011,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,precalc-placement,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-MATH 1201,,MATH 1011,MATH,1011,prerequisite,placement_sequence,calculus-entry,one_of,False,False,Undergraduate math sequence used by the CIS majors and degree maps.,2026-11-20T16:41:34+00:00
-MATH 1201,,MATH 1012,MATH,1012,prerequisite,placement_sequence,calculus-entry,one_of,False,False,Undergraduate math sequence used by the CIS majors and degree maps.,2026-11-20T16:41:34+00:00
-MATH 1206,,MATH 1201,MATH,1201,prerequisite,placement_sequence,calculus-2,all,False,False,Undergraduate math sequence used by the CIS majors and degree maps.,2026-11-20T16:41:34+00:00
-,computational-mathematics-bs,MATH 1201,MATH,1201,program_requirement,program,comp-calculus,all,False,False,,2026-11-20T16:41:34+00:00
-,computational-mathematics-bs,MATH 1206,MATH,1206,program_requirement,program,comp-calculus,all,False,False,,2026-11-20T16:41:34+00:00
-,computational-mathematics-bs,MATH 1006,MATH,1006,program_requirement,program,comp-math-placement,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,computational-mathematics-bs,MATH 1011,MATH,1011,program_requirement,program,comp-precalculus,one_of,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,computational-mathematics-bs,MATH 1012,MATH,1012,program_requirement,program,comp-precalculus,one_of,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,computer-science-bs,MATH 1201,MATH,1201,program_requirement,program,cs-calculus,all,False,False,,2026-11-20T16:41:34+00:00
-,computer-science-bs,MATH 1206,MATH,1206,program_requirement,program,cs-calculus,all,False,False,,2026-11-20T16:41:34+00:00
-,computer-science-bs,MATH 1211,MATH,1211,program_requirement,program,cs-calculus-transfer,all,False,False,"Required for transfer students who already have credit for the older MATH 3.20 and 4.20 sequence, in place of MATH 1201 and 1206.",2026-11-20T16:41:34+00:00
-,computer-science-bs,CISC 2820W,CISC,2820W,program_requirement,program,cs-ethics,one_of,False,True,,2026-11-20T16:41:34+00:00
-,computer-science-bs,PHIL 3318W,PHIL,3318W,program_requirement,program,cs-ethics,one_of,False,False,,2026-11-20T16:41:34+00:00
-,computer-science-bs,MATH 1006,MATH,1006,program_requirement,program,cs-math-placement,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,computer-science-bs,MATH 1011,MATH,1011,program_requirement,program,cs-precalculus,one_of,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,computer-science-bs,MATH 1012,MATH,1012,program_requirement,program,cs-precalculus,one_of,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,computer-science-bs,MATH 2501,MATH,2501,program_requirement,program,cs-statistics,one_of,False,False,,2026-11-20T16:41:34+00:00
-,computer-science-bs,MATH 3501,MATH,3501,program_requirement,program,cs-statistics,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,ACCT 2001,ACCT,2001,program_requirement,program,is-accounting,all,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 3120,BUSN,3120,program_requirement,program,is-ecommerce,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 3432,BUSN,3432,program_requirement,program,is-ecommerce,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,CISC 1530,CISC,1530,program_requirement,program,is-ecommerce,one_of,False,True,,2026-11-20T16:41:34+00:00
-,information-systems-bs,CISC 2532,CISC,2532,program_requirement,program,is-ecommerce,one_of,False,True,,2026-11-20T16:41:34+00:00
-,information-systems-bs,CISC 2820W,CISC,2820W,program_requirement,program,is-ethics,one_of,False,True,,2026-11-20T16:41:34+00:00
-,information-systems-bs,PHIL 3318W,PHIL,3318W,program_requirement,program,is-ethics,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,FINC 3310,FINC,3310,program_requirement,program,is-finance,all,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 2200,BUSN,2200,program_requirement,program,is-macro,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,ECON 2200,ECON,2200,program_requirement,program,is-macro,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 3200,BUSN,3200,program_requirement,program,is-management,all,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,MATH 1006,MATH,1006,program_requirement,program,is-math-placement,all,True,False,Applies when MATH 2501 or MATH 3501 is chosen. MATH 1006 may be required before MATH 1011 and can be waived by placement.,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 2100,BUSN,2100,program_requirement,program,is-micro,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,ECON 2100,ECON,2100,program_requirement,program,is-micro,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 3420,BUSN,3420,program_requirement,program,is-mis,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,CISC 1590,CISC,1590,program_requirement,program,is-mis,one_of,False,True,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 3430,BUSN,3430,program_requirement,program,is-operations,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,CISC 2531,CISC,2531,program_requirement,program,is-operations,one_of,False,True,,2026-11-20T16:41:34+00:00
-,information-systems-bs,MATH 1011,MATH,1011,program_requirement,program,is-precalculus-if-stats,one_of,True,False,Applies when MATH 2501 or MATH 3501 is chosen. MATH 1006 may be required before MATH 1011 and can be waived by placement.,2026-11-20T16:41:34+00:00
-,information-systems-bs,MATH 1012,MATH,1012,program_requirement,program,is-precalculus-if-stats,one_of,True,False,Applies when MATH 2501 or MATH 3501 is chosen. MATH 1006 may be required before MATH 1011 and can be waived by placement.,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 3400,BUSN,3400,program_requirement,program,is-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,ECON 3400,ECON,3400,program_requirement,program,is-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,MATH 2501,MATH,2501,program_requirement,program,is-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,MATH 3501,MATH,3501,program_requirement,program,is-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,PSYC 3400,PSYC,3400,program_requirement,program,is-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 3410,BUSN,3410,program_requirement,program,is-second-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 3421,BUSN,3421,program_requirement,program,is-second-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,CISC 2590,CISC,2590,program_requirement,program,is-second-quantitative,one_of,False,True,,2026-11-20T16:41:34+00:00
-,information-systems-bs,ECON 3410,ECON,3410,program_requirement,program,is-second-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,MATH 1201,MATH,1201,program_requirement,program,is-second-quantitative,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,BUSN 4202W,BUSN,4202W,program_requirement,program,is-seminar,one_of,False,False,,2026-11-20T16:41:34+00:00
-,information-systems-bs,CISC 1580W,CISC,1580W,program_requirement,program,is-seminar,one_of,False,True,,2026-11-20T16:41:34+00:00
-,multimedia-computing-bs,MATH 1201,MATH,1201,program_requirement,program,mmc-calculus-1,all,False,False,,2026-11-20T16:41:34+00:00
-,multimedia-computing-bs,MATH 1006,MATH,1006,program_requirement,program,mmc-math-placement,all,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,multimedia-computing-bs,MATH 1011,MATH,1011,program_requirement,program,mmc-precalculus,one_of,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,multimedia-computing-bs,MATH 1012,MATH,1012,program_requirement,program,mmc-precalculus,one_of,True,False,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
-,multimedia-computing-bs,MATH 1206,MATH,1206,program_requirement,program,mmc-second-math,one_of,False,False,,2026-11-20T16:41:34+00:00
-,multimedia-computing-bs,MATH 1711,MATH,1711,program_requirement,program,mmc-second-math,one_of,False,False,,2026-11-20T16:41:34+00:00
-,multimedia-computing-bs,MATH 1716,MATH,1716,program_requirement,program,mmc-third-math,one_of,False,False,,2026-11-20T16:41:34+00:00
-,multimedia-computing-bs,MATH 2501,MATH,2501,program_requirement,program,mmc-third-math,one_of,False,False,,2026-11-20T16:41:34+00:00
+CISC 1030,,CORC 1312,CORC,1312,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1035,,CORC 1312,CORC,1312,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1060,,CORC 1312,CORC,1312,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1060,,CORC 3303,CORC,3303,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1062,,CORC 1312,CORC,1312,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1062,,CORC 3303,CORC,3303,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1112,,CISC 1111,CISC,1111,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1114,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1150,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1150,,CISC 3110,CISC,3110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1150,,CISC 3115,CISC,3115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1155,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1160,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1341,,CISC 1110,CISC,1110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1341,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1341,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1341,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1341,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1341,,CISC 1180,CISC,1180,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1400,,CORC 1311,CORC,1311,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1400,,MATH 1311,MATH,1311,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1530,,CISC 1050,CISC,1050,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1530,,CISC 1110,CISC,1110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1530,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1530,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1530,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,BUSN 3200,BUSN,3200,pre_or_corequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,BUSN 3400,BUSN,3400,pre_or_corequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,BUSN 3430,BUSN,3430,pre_or_corequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,CISC 1050,CISC,1050,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,CISC 1110,CISC,1110,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,CISC 1113,CISC,1113,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,CISC 1114,CISC,1114,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,CISC 1115,CISC,1115,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,CISC 1170,CISC,1170,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,CISC 1180,CISC,1180,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,CISC 2531,CISC,2531,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,ENGL 1012,ENGL,1012,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,MATH 2501,MATH,2501,pre_or_corequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,MATH 3501,MATH,3501,pre_or_corequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1580W,,PSYC 3400,PSYC,3400,pre_or_corequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 1590,,CISC 1050,CISC,1050,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 1595,,CISC 1050,CISC,1050,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2210,,CISC 1110,CISC,1110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2210,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2210,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2210,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2210,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2210,,CISC 1180,CISC,1180,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2210,,CISC 1215,CISC,1215,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2210,,MATH 1011,MATH,1011,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2210,,MATH 1012,MATH,1012,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2210,,MATH 1201,MATH,1201,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2531,,BUSN 3400,BUSN,3400,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 1000,CISC,1000,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 1050,CISC,1050,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 1110,CISC,1110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 1180,CISC,1180,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2531,,CORC 1312,CORC,1312,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2531,,ECON 3400,ECON,3400,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2531,,MATH 2501,MATH,2501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2531,,MATH 3501,MATH,3501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2531,,PSYC 3400,PSYC,3400,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2532,,BUSN 3420,BUSN,3420,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2532,,CISC 1590,CISC,1590,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2590,,BUSN 3400,BUSN,3400,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2590,,CISC 1050,CISC,1050,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2590,,ECON 3400,ECON,3400,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2590,,MATH 1501,MATH,1501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2590,,PSYC 3400,PSYC,3400,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2600,,MUSC 3260,MUSC,3260,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2810W,,ENGL 1001,ENGL,1001,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2810W,,ENGL 1002,ENGL,1002,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2810W,,ENGL 1012,ENGL,1012,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,CISC 1000,CISC,1000,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,CISC 1110,CISC,1110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,CISC 1180,CISC,1180,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,CORC 1312,CORC,1312,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2820W,,ENGL 1012,ENGL,1012,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2830,,CISC 1110,CISC,1110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2830,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2830,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2830,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2830,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2830,,CISC 1180,CISC,1180,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2830,,CISC 2210,CISC,2210,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 2830,,LING 2001,LING,2001,pre_or_corequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3110,,CISC 1110,CISC,1110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3110,,CISC 1180,CISC,1180,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3115,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3115,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3115,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3115,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3120,,CISC 3110,CISC,3110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3130,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3130,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3130,,CISC 3110,CISC,3110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3130,,CISC 3115,CISC,3115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3140,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3140,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3140,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3140,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3140,,CISC 3115,CISC,3115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3140,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3141,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3141,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3141,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3141,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3141,,CISC 3115,CISC,3115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3141,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3142,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3142,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3142,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3142,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3142,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3142,,CISC 3310,CISC,3310,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3144,,CISC 3140,CISC,3140,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3146,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3150,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3160,,CISC 3142,CISC,3142,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3171,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3220,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3220,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3220,,MATH 1201,MATH,1201,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3225,,CISC 1215,CISC,1215,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3225,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3225,,MATH 2001,MATH,2001,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3230,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3230,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3230,,MATH 1201,MATH,1201,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3240,,MATH 2101,MATH,2101,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3250,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3250,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3305,,CISC 1341,CISC,1341,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3305,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3310,,CISC 1110,CISC,1110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3310,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3310,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3310,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3310,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3310,,CISC 1180,CISC,1180,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3310,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3315,,CISC 1341,CISC,1341,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3315,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3320,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3320,,CISC 3305,CISC,3305,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3320,,CISC 3310,CISC,3310,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3320,,CISC 3315,CISC,3315,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3325,,CISC 3320,CISC,3320,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3330,,CISC 3142,CISC,3142,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3340,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3340,,CISC 3305,CISC,3305,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3340,,CISC 3310,CISC,3310,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3340,,CISC 3315,CISC,3315,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3340,,MATH 2501,MATH,2501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3343,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3343,,CISC 3305,CISC,3305,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3343,,CISC 3310,CISC,3310,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3343,,CISC 3315,CISC,3315,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3343,,MATH 2501,MATH,2501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3345,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3345,,CISC 3305,CISC,3305,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3345,,CISC 3310,CISC,3310,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3345,,CISC 3315,CISC,3315,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3350,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3390,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3390,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3390,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3390,,CISC 1150,CISC,1150,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3390,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3390,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3390,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3410,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3415,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3415,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3440,,CISC 2210,CISC,2210,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3440,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3440,,CISC 3225,CISC,3225,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3440,,MATH 2501,MATH,2501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3440,,MATH 3501,MATH,3501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3610,,CISC 3110,CISC,3110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3610,,CISC 3115,CISC,3115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3620,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3620,,MATH 1011,MATH,1011,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3620,,MATH 1012,MATH,1012,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3620,,MATH 1026,MATH,1026,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3620,,MATH 1201,MATH,1201,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3630,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3650,,CISC 3115,CISC,3115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3650,,CISC 3120,CISC,3120,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3660,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3665,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3665,,MATH 1011,MATH,1011,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3665,,MATH 1012,MATH,1012,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3665,,MATH 1201,MATH,1201,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3667,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3800,,CISC 1050,CISC,1050,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3800,,CISC 1113,CISC,1113,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3800,,CISC 1114,CISC,1114,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3800,,CISC 1115,CISC,1115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3800,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3800,,CISC 1180,CISC,1180,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3810,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3820,,CISC 3110,CISC,3110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3820,,CISC 3115,CISC,3115,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 3820,,MATH 2501,MATH,2501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 3820,,MATH 3501,MATH,3501,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 4331,,CISC 3320,CISC,3320,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4331,,CISC 3350,CISC,3350,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 1150,CISC,1150,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 1170,CISC,1170,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3150,CISC,3150,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3160,CISC,3160,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3305,CISC,3305,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3310,CISC,3310,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3315,CISC,3315,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3320,CISC,3320,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3330,CISC,3330,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3350,CISC,3350,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3410,CISC,3410,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4335,,CISC 3820,CISC,3820,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4610,,CISC 3630,CISC,3630,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4610,,CISC 3635,CISC,3635,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4610,,CISC 3810,CISC,3810,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4800,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4900,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4905,,CISC 4900,CISC,4900,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4920,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4920,,CISC 3220,CISC,3220,pre_or_corequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4945,,CISC 4940,CISC,4940,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 4955,,CISC 4950,CISC,4950,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 5001,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 5002,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 5003,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 5004,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7124X,,CISC 7110X,CISC,7110X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7124X,,CISC 7120X,CISC,7120X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7124X,,CISC 7122X,CISC,7122X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7124X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7124X,,CISC 7312X,CISC,7312X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7212X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7214X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7220X,,CISC 7221X,CISC,7221X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7224X,,CISC 7221X,CISC,7221X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7226X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7226X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7228X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7230X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7310X,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7310X,,CISC 3310,CISC,3310,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7312X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7320X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7320X,,MATH 7280X,MATH,7280X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7330X,,CISC 7300X,CISC,7300X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7330X,,CISC 7302X,CISC,7302X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7330X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7330X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7332X,,CISC 7300X,CISC,7300X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7332X,,CISC 7302X,CISC,7302X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7332X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7332X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7334X,,CISC 7300X,CISC,7300X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7334X,,CISC 7302X,CISC,7302X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7334X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7334X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7340X,,CISC 7100X,CISC,7100X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7340X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7350X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7352X,,CISC 7310X,CISC,7310X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7352X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7352X,,MATH 7280X,MATH,7280X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7410X,,CISC 3310,CISC,3310,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7412X,,CISC 7410X,CISC,7410X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7414X,,CISC 7410X,CISC,7410X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7422X,,CISC 6004X,CISC,6004X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7440X,,CISC 7410X,CISC,7410X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7440X,,MATH 6652X,MATH,6652X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7440X,,MATH 7280X,MATH,7280X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7442X,,CISC 7440X,CISC,7440X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7442X,,CISC 7650X,CISC,7650X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7450X,,CISC 7000,CISC,7000,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7500X,,CISC 3110,CISC,3110,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7510X,,CISC 1050,CISC,1050,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7510X,,CISC 3810,CISC,3810,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7512X,,CISC 7510X,CISC,7510X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7522X,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7532X,,CISC 7500X,CISC,7500X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7534X,,CISC 7500X,CISC,7500X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7610X,,CISC 7510X,CISC,7510X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7620X,,CISC 3130,CISC,3130,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7650X,,CISC 7200X,CISC,7200X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7650X,,MATH 7280X,MATH,7280X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7700X,,CISC 7510X,CISC,7510X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7704X,,CISC 7278X,CISC,7278X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7704X,,CISC 7280X,CISC,7280X,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 7902X,,CISC 7900X,CISC,7900X,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7992G,,CISC 7990G,CISC,7990G,prerequisite,catalog,,,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+CISC 7994G,,CISC 7992,CISC,7992,prerequisite,catalog,,,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+CISC 2210,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+CISC 3220,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+CISC 3230,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+CISC 3620,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+CISC 3665,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,math-1006,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+MATH 1011,,MATH 1006,MATH,1006,placement_prerequisite,placement_sequence,precalc-placement,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+MATH 1201,,MATH 1011,MATH,1011,prerequisite,placement_sequence,calculus-entry,one_of,FALSE,FALSE,Undergraduate math sequence used by the CIS majors and degree maps.,2026-11-20T16:41:34+00:00
+MATH 1201,,MATH 1012,MATH,1012,prerequisite,placement_sequence,calculus-entry,one_of,FALSE,FALSE,Undergraduate math sequence used by the CIS majors and degree maps.,2026-11-20T16:41:34+00:00
+MATH 1206,,MATH 1201,MATH,1201,prerequisite,placement_sequence,calculus-2,all,FALSE,FALSE,Undergraduate math sequence used by the CIS majors and degree maps.,2026-11-20T16:41:34+00:00
+,computational-mathematics-bs,MATH 1201,MATH,1201,program_requirement,program,comp-calculus,all,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,computational-mathematics-bs,MATH 1206,MATH,1206,program_requirement,program,comp-calculus,all,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,computational-mathematics-bs,MATH 1006,MATH,1006,program_requirement,program,comp-math-placement,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,computational-mathematics-bs,MATH 1011,MATH,1011,program_requirement,program,comp-precalculus,one_of,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,computational-mathematics-bs,MATH 1012,MATH,1012,program_requirement,program,comp-precalculus,one_of,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,computer-science-bs,MATH 1201,MATH,1201,program_requirement,program,cs-calculus,all,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,computer-science-bs,MATH 1206,MATH,1206,program_requirement,program,cs-calculus,all,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,computer-science-bs,MATH 1211,MATH,1211,program_requirement,program,cs-calculus-transfer,all,FALSE,FALSE,"Required for transfer students who already have credit for the older MATH 3.20 and 4.20 sequence, in place of MATH 1201 and 1206.",2026-11-20T16:41:34+00:00
+,computer-science-bs,CISC 2820W,CISC,2820W,program_requirement,program,cs-ethics,one_of,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+,computer-science-bs,PHIL 3318W,PHIL,3318W,program_requirement,program,cs-ethics,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,computer-science-bs,MATH 1006,MATH,1006,program_requirement,program,cs-math-placement,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,computer-science-bs,MATH 1011,MATH,1011,program_requirement,program,cs-precalculus,one_of,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,computer-science-bs,MATH 1012,MATH,1012,program_requirement,program,cs-precalculus,one_of,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,computer-science-bs,MATH 2501,MATH,2501,program_requirement,program,cs-statistics,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,computer-science-bs,MATH 3501,MATH,3501,program_requirement,program,cs-statistics,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,ACCT 2001,ACCT,2001,program_requirement,program,is-accounting,all,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 3120,BUSN,3120,program_requirement,program,is-ecommerce,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 3432,BUSN,3432,program_requirement,program,is-ecommerce,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,CISC 1530,CISC,1530,program_requirement,program,is-ecommerce,one_of,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,CISC 2532,CISC,2532,program_requirement,program,is-ecommerce,one_of,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,CISC 2820W,CISC,2820W,program_requirement,program,is-ethics,one_of,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,PHIL 3318W,PHIL,3318W,program_requirement,program,is-ethics,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,FINC 3310,FINC,3310,program_requirement,program,is-finance,all,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 2200,BUSN,2200,program_requirement,program,is-macro,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,ECON 2200,ECON,2200,program_requirement,program,is-macro,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 3200,BUSN,3200,program_requirement,program,is-management,all,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,MATH 1006,MATH,1006,program_requirement,program,is-math-placement,all,TRUE,FALSE,Applies when MATH 2501 or MATH 3501 is chosen. MATH 1006 may be required before MATH 1011 and can be waived by placement.,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 2100,BUSN,2100,program_requirement,program,is-micro,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,ECON 2100,ECON,2100,program_requirement,program,is-micro,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 3420,BUSN,3420,program_requirement,program,is-mis,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,CISC 1590,CISC,1590,program_requirement,program,is-mis,one_of,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 3430,BUSN,3430,program_requirement,program,is-operations,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,CISC 2531,CISC,2531,program_requirement,program,is-operations,one_of,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,MATH 1011,MATH,1011,program_requirement,program,is-precalculus-if-stats,one_of,TRUE,FALSE,Applies when MATH 2501 or MATH 3501 is chosen. MATH 1006 may be required before MATH 1011 and can be waived by placement.,2026-11-20T16:41:34+00:00
+,information-systems-bs,MATH 1012,MATH,1012,program_requirement,program,is-precalculus-if-stats,one_of,TRUE,FALSE,Applies when MATH 2501 or MATH 3501 is chosen. MATH 1006 may be required before MATH 1011 and can be waived by placement.,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 3400,BUSN,3400,program_requirement,program,is-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,ECON 3400,ECON,3400,program_requirement,program,is-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,MATH 2501,MATH,2501,program_requirement,program,is-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,MATH 3501,MATH,3501,program_requirement,program,is-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,PSYC 3400,PSYC,3400,program_requirement,program,is-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 3410,BUSN,3410,program_requirement,program,is-second-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 3421,BUSN,3421,program_requirement,program,is-second-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,CISC 2590,CISC,2590,program_requirement,program,is-second-quantitative,one_of,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,ECON 3410,ECON,3410,program_requirement,program,is-second-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,MATH 1201,MATH,1201,program_requirement,program,is-second-quantitative,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,BUSN 4202W,BUSN,4202W,program_requirement,program,is-seminar,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,information-systems-bs,CISC 1580W,CISC,1580W,program_requirement,program,is-seminar,one_of,FALSE,TRUE,,2026-11-20T16:41:34+00:00
+,multimedia-computing-bs,MATH 1201,MATH,1201,program_requirement,program,mmc-calculus-1,all,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,multimedia-computing-bs,MATH 1006,MATH,1006,program_requirement,program,mmc-math-placement,all,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,multimedia-computing-bs,MATH 1011,MATH,1011,program_requirement,program,mmc-precalculus,one_of,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,multimedia-computing-bs,MATH 1012,MATH,1012,program_requirement,program,mmc-precalculus,one_of,TRUE,FALSE,"Degree maps place MATH 1006 before MATH 1011 when placement requires it. Program requirements allow MATH 1006, 1011, and 1012 to be waived by a placement exam.",2026-11-20T16:41:34+00:00
+,multimedia-computing-bs,MATH 1206,MATH,1206,program_requirement,program,mmc-second-math,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,multimedia-computing-bs,MATH 1711,MATH,1711,program_requirement,program,mmc-second-math,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,multimedia-computing-bs,MATH 1716,MATH,1716,program_requirement,program,mmc-third-math,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
+,multimedia-computing-bs,MATH 2501,MATH,2501,program_requirement,program,mmc-third-math,one_of,FALSE,FALSE,,2026-11-20T16:41:34+00:00
