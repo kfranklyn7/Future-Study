@@ -8,6 +8,7 @@ import {
   Controls,
   MarkerType,
   ReactFlow,
+  getViewportForBounds,
   type Edge,
   type NodeTypes,
   type ReactFlowInstance,
@@ -23,6 +24,8 @@ import { useTheme } from '#/theme'
 const nodeTypes: NodeTypes = { course: CourseNode }
 
 const DRAWER_WIDTH = 460
+const MIN_ZOOM = 0.3
+const MAX_ZOOM = 1.8
 
 const STORAGE_KEY = 'future-study:map:v1'
 
@@ -96,21 +99,56 @@ export function Roadmap() {
   useEffect(() => () => window.clearTimeout(hoverTimer.current), [])
   const [rf, setRf] = useState<ReactFlowInstance<CourseFlowNode, Edge> | null>(null)
 
-  // Fit the whole map once the layout has settled, and again when the window resizes.
+  // Fit the whole map once the layout has settled, and again when the window resizes. While the
+  // course drawer is open, fit it into the space left of the drawer so the drawer covers nothing.
+  const drawerOpen = !!selectedId
+  const mapRef = useRef<HTMLDivElement>(null)
+  const wasDrawerOpen = useRef(drawerOpen)
   useEffect(() => {
     if (!rf) return
-    const fit = () => rf.fitView({ padding: '24px' })
-    const frame = requestAnimationFrame(fit)
-    window.addEventListener('resize', fit)
+    const toggled = wasDrawerOpen.current !== drawerOpen
+    wasDrawerOpen.current = drawerOpen
+    // Computed here and applied with setViewport: rf.fitView only queues a fit for React Flow's
+    // next node update, so it doesn't reliably move the map right away.
+    const fit = (duration?: number) => {
+      const box = mapRef.current
+      if (!box) return
+      const { width, height } = box.getBoundingClientRect()
+      const room = drawerOpen && width - DRAWER_WIDTH >= 240 // phone: the drawer is full width, so leave the map be
+      const padding = room ? { top: 24, bottom: 24, left: 24, right: DRAWER_WIDTH + 24 } : 24 // pixels
+      // Bounds from our own layout plus each box's rendered size. rf.getNodesBounds can't be
+      // used here: React Flow drops its measured sizes when the nodes prop is rebuilt (which
+      // happens on every selection), so it would count every box as 0 x 0.
+      let x1 = Infinity, y1 = Infinity, x2 = -Infinity, y2 = -Infinity
+      for (const def of mapNodes) {
+        const el = box.querySelector<HTMLElement>(`.react-flow__node[data-id="${def.id}"]`)
+        x1 = Math.min(x1, def.x)
+        y1 = Math.min(y1, def.y)
+        x2 = Math.max(x2, def.x + (el?.offsetWidth || NODE_WIDTH))
+        y2 = Math.max(y2, def.y + (el?.offsetHeight || 60))
+      }
+      const bounds = { x: x1, y: y1, width: x2 - x1, height: y2 - y1 }
+      void rf.setViewport(getViewportForBounds(bounds, width, height, MIN_ZOOM, MAX_ZOOM, padding), { duration })
+    }
+    const onResize = () => fit()
+    // First load: let React Flow fit once the boxes have been measured. Drawer open/close: slide.
+    const frame = requestAnimationFrame(() =>
+      toggled ? fit(prefersReducedMotion() ? undefined : 350) : void rf.fitView({ padding: '24px' }),
+    )
+    window.addEventListener('resize', onResize)
     return () => {
       cancelAnimationFrame(frame)
-      window.removeEventListener('resize', fit)
+      window.removeEventListener('resize', onResize)
     }
-  }, [rf])
+  }, [rf, drawerOpen])
 
-  // If the drawer would cover the selected box, slide the map left so the box stays visible.
+  // Picking another course while the drawer is open: if the user has zoomed in and the drawer
+  // covers that box, slide the map left so the box stays visible.
+  const prevSelected = useRef<string | null>(null)
   useEffect(() => {
-    if (!rf || !selectedId) return
+    const prev = prevSelected.current
+    prevSelected.current = selectedId
+    if (!rf || !selectedId || !prev) return
     const def = mapNodeById[selectedId]
     const right = rf.flowToScreenPosition({ x: def.x + NODE_WIDTH, y: def.y }).x
     const drawerLeft = window.innerWidth - Math.min(DRAWER_WIDTH, window.innerWidth)
@@ -291,7 +329,7 @@ export function Roadmap() {
       </header>
 
       {/* The map gets a full screen of height to itself, below the progress card. */}
-      <div className="relative h-[calc(100vh-3.5rem)] min-h-[520px]">
+      <div ref={mapRef} className="relative h-[calc(100vh-3.5rem)] min-h-[520px]">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -309,8 +347,8 @@ export function Roadmap() {
           preventScrolling={false}
           fitView
           fitViewOptions={{ padding: '24px' }}
-          minZoom={0.3}
-          maxZoom={1.8}
+          minZoom={MIN_ZOOM}
+          maxZoom={MAX_ZOOM}
           proOptions={{ hideAttribution: true }}
         >
           <Background variant={BackgroundVariant.Dots} gap={22} size={1.2} color={dark ? '#4a433c' : '#d6d3d1'} />
