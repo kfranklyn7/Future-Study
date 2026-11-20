@@ -10,11 +10,21 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CareersRouteImport } from './routes/careers'
 import { Route as GraphRouteImport } from './routes/graph'
+import { Route as CoursesIndexRouteImport } from './routes/courses/index'
+import { Route as CoursesCodeRouteImport } from './routes/courses/$code'
+import { Route as ProgramsIndexRouteImport } from './routes/programs/index'
+import { Route as ProgramsIdRouteImport } from './routes/programs/$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GraphRoute = GraphRouteImport.update({
@@ -22,31 +32,93 @@ const GraphRoute = GraphRouteImport.update({
   path: '/graph',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CoursesIndexRoute = CoursesIndexRouteImport.update({
+  id: '/courses/',
+  path: '/courses/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoursesCodeRoute = CoursesCodeRouteImport.update({
+  id: '/courses/$code',
+  path: '/courses/$code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsIndexRoute = ProgramsIndexRouteImport.update({
+  id: '/programs/',
+  path: '/programs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsIdRoute = ProgramsIdRouteImport.update({
+  id: '/programs/$id',
+  path: '/programs/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/careers': typeof CareersRoute
   '/graph': typeof GraphRoute
+  '/courses/$code': typeof CoursesCodeRoute
+  '/programs/$id': typeof ProgramsIdRoute
+  '/courses/': typeof CoursesIndexRoute
+  '/programs/': typeof ProgramsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/careers': typeof CareersRoute
   '/graph': typeof GraphRoute
+  '/courses/$code': typeof CoursesCodeRoute
+  '/programs/$id': typeof ProgramsIdRoute
+  '/courses': typeof CoursesIndexRoute
+  '/programs': typeof ProgramsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/careers': typeof CareersRoute
   '/graph': typeof GraphRoute
+  '/courses/$code': typeof CoursesCodeRoute
+  '/programs/$id': typeof ProgramsIdRoute
+  '/courses/': typeof CoursesIndexRoute
+  '/programs/': typeof ProgramsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/graph'
+  fullPaths:
+    | '/'
+    | '/careers'
+    | '/graph'
+    | '/courses/$code'
+    | '/programs/$id'
+    | '/courses/'
+    | '/programs/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/graph'
-  id: '__root__' | '/' | '/graph'
+  to:
+    | '/'
+    | '/careers'
+    | '/graph'
+    | '/courses/$code'
+    | '/programs/$id'
+    | '/courses'
+    | '/programs'
+  id:
+    | '__root__'
+    | '/'
+    | '/careers'
+    | '/graph'
+    | '/courses/$code'
+    | '/programs/$id'
+    | '/courses/'
+    | '/programs/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CareersRoute: typeof CareersRoute
   GraphRoute: typeof GraphRoute
+  CoursesCodeRoute: typeof CoursesCodeRoute
+  ProgramsIdRoute: typeof ProgramsIdRoute
+  CoursesIndexRoute: typeof CoursesIndexRoute
+  ProgramsIndexRoute: typeof ProgramsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,6 +130,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/graph': {
       id: '/graph'
       path: '/graph'
@@ -65,12 +144,45 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GraphRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/courses/': {
+      id: '/courses/'
+      path: '/courses'
+      fullPath: '/courses/'
+      preLoaderRoute: typeof CoursesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/courses/$code': {
+      id: '/courses/$code'
+      path: '/courses/$code'
+      fullPath: '/courses/$code'
+      preLoaderRoute: typeof CoursesCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/': {
+      id: '/programs/'
+      path: '/programs'
+      fullPath: '/programs/'
+      preLoaderRoute: typeof ProgramsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/$id': {
+      id: '/programs/$id'
+      path: '/programs/$id'
+      fullPath: '/programs/$id'
+      preLoaderRoute: typeof ProgramsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CareersRoute: CareersRoute,
   GraphRoute: GraphRoute,
+  CoursesCodeRoute: CoursesCodeRoute,
+  ProgramsIdRoute: ProgramsIdRoute,
+  CoursesIndexRoute: CoursesIndexRoute,
+  ProgramsIndexRoute: ProgramsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
